@@ -1267,13 +1267,17 @@ var Experience = exports.Experience = function (_React$Component2) {
 
             return _react2.default.createElement(
                 "div",
-                { className: "experience" },
+                null,
                 _react2.default.createElement(
                     "h2",
                     null,
                     "Work Experience"
                 ),
-                workHistoryRender
+                _react2.default.createElement(
+                    "div",
+                    { className: "experience" },
+                    workHistoryRender
+                )
             );
         }
     }]);

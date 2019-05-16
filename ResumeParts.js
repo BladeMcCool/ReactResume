@@ -73,9 +73,11 @@ export class Experience extends React.Component {
         }
 
         return (
-            <div className="experience">
+            <div>
                 <h2>Work Experience</h2>
-                {workHistoryRender}
+                <div className="experience">
+                    {workHistoryRender}
+                </div>
             </div>
         )
     }

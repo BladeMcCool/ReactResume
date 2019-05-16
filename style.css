@@ -21,3 +21,7 @@ h2 { border-bottom: 3px solid black; margin-bottom: 10px; margin-top: 10px; padd
 a, a:visited, a:hover, a:active {  color: inherit; }
 .pageBreak { break-after: always; }
 
+@page { 
+    size: auto;
+    margin: 10mm 10mm 10mm 10mm;  
+}
