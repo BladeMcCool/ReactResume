@@ -1,0 +1,23 @@
+body { background-color: teal; margin: 25px; font-family: sans-serif; }
+p { margin: 0px; font-size: 14px; }
+h6 { margin: 0px; }
+.header h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px}
+.header h2 { font-weight: normal; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 18px }
+.header p { margin: 0px;}
+div.header { border-bottom: 3px solid black; padding-bottom: 10px; }
+.hobbies span { display: block; float: left; margin-right: 40px; margin-bottom: 20px; }
+div.workEntry { border-bottom: 1px solid black; margin-bottom: 10px; }
+div.project { border-top: 1px solid black; padding-top: 10px}
+.workEntry .description { margin-top: 10px; margin-bottom: 0px; }
+h2 { border-bottom: 3px solid black; margin-bottom: 10px; margin-top: 10px; padding-bottom: 10px; }
+.experience { display: grid;  }
+.experience .workEntry { display: grid; grid-template-columns: 150px auto }
+.experience .project { display: grid; grid-template-columns: 100px auto; }
+.projectDesc p { margin-left: 10px; margin-bottom: 10px; }
+.projectDesc h6 { margin-left: 10px; margin-bottom: 10px; font-weight: normal;}
+.jobDesc p { margin-bottom: 10px; }
+.companyLbl p { font-weight: bold; }
+.techLbl { font-weight: bold; }
+a, a:visited, a:hover, a:active {  color: inherit; }
+.pageBreak { break-after: always; }
+
