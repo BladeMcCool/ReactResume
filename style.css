@@ -1,4 +1,4 @@
-body { background-color: teal; margin: 25px; font-family: sans-serif; }
+body { background-color: #17B5C2; margin: 25px; font-family: sans-serif; text-align: center; }
 p { margin: 0px; font-size: 14px; }
 h6 { margin: 0px; }
 .header h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px}
@@ -6,6 +6,7 @@ h6 { margin: 0px; }
 .header p { margin: 0px;}
 div.header { border-bottom: 3px solid black; padding-bottom: 10px; }
 .hobbies span { display: block; float: left; margin-right: 40px; margin-bottom: 20px; }
+div.resumeContainer { display: inline-block; width: 210mm; text-align: left }
 div.workEntry { border-bottom: 1px solid black; margin-bottom: 10px; }
 div.project { border-top: 1px solid black; padding-top: 10px}
 .workEntry .description { margin-top: 10px; margin-bottom: 0px; }

@@ -5,14 +5,17 @@
     "react-dom": "16.0.0"
   },
   "devDependencies": {
-    "webpack": "^2.0",
     "babel-core": "^6.0",
     "babel-loader": "^7.0",
     "babel-preset-env": "*",
-    "babel-preset-react": "*"
+    "babel-preset-react": "*",
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^2.0"
   },
   "scripts": {
     "build": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "start": "webpack-dev-server --host 192.168.1.103 --port 8099 --content-base ./ --hot"
   }
 }

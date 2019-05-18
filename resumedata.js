@@ -77,7 +77,7 @@ export const resumeData = {
 	},{
 		"company":"SunLife Financial",
 		"companydesc":"Enterprise Application Development and Content Management Systems",
-		"location":"Burlington, ON",
+		"location":"Toronto, ON",
 		"jobtitle":"Intern - Internet Technologies Group",
 		"daterange": "Summer 2001",		
 		"jobdesc":"Diagrammed portions of the network infrastructure in the SunLife network using Visio 2000. Performed routine server maintenance (log rotation, disk space checking) of a small set of Solaris servers with the assistance of custom made scripts. Wrote a perl script to catalog the various internal web-services that were available in the intranet and present the results in a web interface.",
