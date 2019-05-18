@@ -1,16 +1,23 @@
-body { background-color: #EDE7DF; margin: 25px; font-family: sans-serif; text-align: center; color: #EDE7DF}
+
+$light: #EDE7DF;
+$dark: #1B211B;
+$colorbg: #2B7099;
+$fat: 3px solid $dark;
+$skinny: 1px solid $dark;
+
+body { background-color: $light; margin: 25px; font-family: sans-serif; text-align: center; color: $light}
 p { margin: 0px; font-size: 14px; }
 h6 { margin: 0px; }
 .header h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px}
 .header h2 { font-weight: normal; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 18px }
 .header p { margin: 0px;}
-div.header { border-bottom: 3px solid #1B211B; padding-bottom: 10px; }
+div.header { border-bottom: $fat; padding-bottom: 10px; }
 .hobbies span { display: block; float: left; margin-right: 40px; margin-bottom: 20px; }
-div.resumeContainer { display: inline-block; width: 210mm; text-align: left; background-color: #2B7099; padding: 15px;  }
-div.workEntry { border-bottom: 1px solid #1B211B; margin-bottom: 10px; }
-div.project { border-top: 1px solid #1B211B; padding-top: 10px}
+div.resumeContainer { display: inline-block; width: 210mm; text-align: left; background-color: $colorbg; padding: 15px;  }
+div.workEntry { border-bottom: $skinny; margin-bottom: 10px; }
+div.project { border-top: $skinny; padding-top: 10px}
 .workEntry .description { margin-top: 10px; margin-bottom: 0px; }
-h2 { border-bottom: 3px solid #1B211B; margin-bottom: 10px; margin-top: 10px; padding-bottom: 10px; }
+h2 { border-bottom: $fat; margin-bottom: 10px; margin-top: 10px; padding-bottom: 10px; }
 .experience { display: grid;  }
 .experience .workEntry { display: grid; grid-template-columns: 150px auto }
 .experience .project { display: grid; grid-template-columns: 100px auto; }
@@ -29,8 +36,4 @@ a, a:visited, a:hover, a:active {  color: inherit; }
 @media print {
    body {color: black;}
 }
-/*
-EDE7DF
-2B7099
-1B211B
-*/
+

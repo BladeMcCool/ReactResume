@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Header, Experience, Education, Hobbies} from "./ResumeParts"
 import { resumeData } from './resumedata.js';
-import './style.css'
+import './style.scss'
 
 class Resume extends React.Component {
     render() {
