@@ -1,7 +1,10 @@
 module.exports = {
   "output": {
-    "filename": "[name].pack.js"
+    "filename": "[name].pack.js",
+    // "path": __dirname + "/dist",
+    "path": __dirname + "/dist/",
   },
+
   "module": {
     "rules": [
       {
