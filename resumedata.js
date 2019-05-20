@@ -52,6 +52,7 @@ export const resumeData = {
 			"github":"https://github.com/BladeMcCool/BitcoinIVR",
 			"location":"Victoria",
 			"jobtitle":"Open Source Developer",
+			"pageBreakBefore":true,
 		}]
 	},{
 		"company":"Go2mobi",
@@ -62,7 +63,6 @@ export const resumeData = {
 		"tech":"Golang, Node.js, Python, AWS, RabbitMQ, Redis, MySQL+Postgres",
 		"daterange": "Nov 2012 - Feb 2017",
 		"sortdate":"2017-02-01",
-		"pagebreakBefore":true,
 	},{
 		"company":"Shrinking Planet Communications",
 		"companydesc":"Content Management Systems and Web Application Development",

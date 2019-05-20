@@ -17,7 +17,6 @@ export class Header extends React.Component {
 export class Experience2 extends React.Component {
     work_history() {
         const work_history = this.props.work_history
-        console.log("yo")
         let entries = []
         for (var entry of work_history) {
             if (entry.desc) {
@@ -41,7 +40,6 @@ export class Experience2 extends React.Component {
             return 0;
         }
         entries.sort( compare );
-        console.log('ghey')
         return entries
     }
     render() {
@@ -50,29 +48,26 @@ export class Experience2 extends React.Component {
         let x = 0
         for (var entry of work_history) {
             x++
+            if (entry.pageBreakBefore) {
+                workHistoryRender.push(
+                    <div key={x+"hdr"} className="page2Header">
+                        <h2>Work Experience Cont'd</h2>
+                    </div>
+                )
+            }
             workHistoryRender.push(
                 <div key={x} className="workEntry">
-                    {/* <div className="dateLbl">
-                        <p>{entry.dates ? entry.dates : entry.daterange }</p>
-                        <p></p>
-                    </div>
-                    <div className="companyLbl">
-                        <p>{entry.jobtitle}</p>
-                        <p>{entry.company}, {entry.location}</p>
-                    </div>
-                    <div>&nbsp;</div> */}
                     <div className="dateLbl">
                         <p>{entry.company}, {entry.location}</p>
-                        <p>{entry.dates ? entry.dates : entry.daterange }</p>
+                        <p>{entry.dates ? entry.dates : entry.daterange}</p>
                     </div>
                     <div className="description">
                         <p className="jobtitle">{entry.jobtitle}</p>
                         <p>{entry.desc}</p>
-                        <p>Technologies: <span className="techLbl">{entry.tech}</span></p>                        
-                        { entry.github ? (<h6>Git Repo: <a href={entry.github}>{entry.github}</a></h6>):(null)}
+                        <p>Technologies: <span className="techLbl">{entry.tech}</span></p>
+                        {entry.github ? (<h6>Git Repo: <a href={entry.github}>{entry.github}</a></h6>) : (null)}
                     </div>
                 </div>
-
             )
         }
         return (
@@ -124,11 +119,6 @@ export class Experience extends React.Component {
                 }
             }
             
-            // Except it doesnt work ... can't work inside the grid ... silly.
-            // if (entry.pagebreakBefore) {
-            //     workHistoryRender.push(<p key={"pagebreak"+x} className="pageBreak"></p>)
-            // }
-
             workHistoryRender.push(
                 <div key={"company"+x} className="workEntry">
                     <div className="dateLbl">

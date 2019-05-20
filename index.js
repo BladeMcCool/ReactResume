@@ -6,7 +6,6 @@ import './style.scss'
 
 class Resume extends React.Component {
     render() {
-        console.log("here.")
         return (
             <div className="resumeContainer">
                 <Header personal_info={resumeData.personal_info} />

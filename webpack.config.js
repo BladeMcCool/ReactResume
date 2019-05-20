@@ -31,9 +31,12 @@ module.exports = {
     "index": "./index"
   },
   // "devtool": "cheap-module-source-map",
-  "devtool": "#source-map",
+  "devtool": "source-map",
   "devServer": {
-  //   contentBase: "./",
+    contentBase: "./",
     writeToDisk: true,
+    host: "192.168.1.103",
+    port: 8099,
+    hot: true,
   }
 };
