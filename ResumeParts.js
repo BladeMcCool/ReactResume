@@ -1,4 +1,5 @@
 import React from 'react';
+import {clone, assign} from 'lodash';
 
 export class Header extends React.Component {
     render() {
@@ -6,8 +7,80 @@ export class Header extends React.Component {
         return (
             <div className="header">
                 <h1>{vars.name}</h1>
-                <h2>{vars.email} - {vars.phone} - {vars.location}</h2>
+                <h3>{vars.email} - {vars.phone} - {vars.location}</h3>
                 <p>{vars.profile}</p>
+            </div>
+        )
+    }
+}
+
+export class Experience2 extends React.Component {
+    work_history() {
+        const work_history = this.props.work_history
+        console.log("yo")
+        let entries = []
+        for (var entry of work_history) {
+            if (entry.desc) {
+                entries.push(entry)
+            } else {
+                for (var project of entry.projects) {
+                    var projEntry = {}
+                    assign(projEntry, entry, project)
+                    entries.push(projEntry)
+                }
+            }
+        }
+        
+        function compare( b, a ) {
+            if ( a.sortdate < b.sortdate ){
+              return -1;
+            }
+            if ( a.sortdate > b.sortdate ){
+              return 1;
+            }
+            return 0;
+        }
+        entries.sort( compare );
+        console.log('ghey')
+        return entries
+    }
+    render() {
+        const work_history = this.work_history()
+        let workHistoryRender = []
+        let x = 0
+        for (var entry of work_history) {
+            x++
+            workHistoryRender.push(
+                <div key={x} className="workEntry">
+                    {/* <div className="dateLbl">
+                        <p>{entry.dates ? entry.dates : entry.daterange }</p>
+                        <p></p>
+                    </div>
+                    <div className="companyLbl">
+                        <p>{entry.jobtitle}</p>
+                        <p>{entry.company}, {entry.location}</p>
+                    </div>
+                    <div>&nbsp;</div> */}
+                    <div className="dateLbl">
+                        <p>{entry.company}, {entry.location}</p>
+                        <p>{entry.dates ? entry.dates : entry.daterange }</p>
+                    </div>
+                    <div className="description">
+                        <p className="jobtitle">{entry.jobtitle}</p>
+                        <p>{entry.desc}</p>
+                        <p>Technologies: <span className="techLbl">{entry.tech}</span></p>                        
+                        { entry.github ? (<h6>Git Repo: <a href={entry.github}>{entry.github}</a></h6>):(null)}
+                    </div>
+                </div>
+
+            )
+        }
+        return (
+            <div>
+                <h2>Work Experience</h2>
+                <div className="experience">
+                    {workHistoryRender}
+                </div>
             </div>
         )
     }
@@ -21,13 +94,13 @@ export class Experience extends React.Component {
         for (var entry of work_history) {
             x++
             let projRender = []
-            if (!entry.jobdesc && !entry.projects.length) {
-                entry.jobdesc = "General Software Consulting"
+            if (!entry.desc && !entry.projects.length) {
+                entry.desc = "General Software Consulting"
             }
-            if (entry.jobdesc) {
+            if (entry.desc) {
                     projRender.push(
                         <div key={"company"+x+"jobdesc"} className="jobDesc">
-                        <p>{entry.jobdesc}</p>
+                        <p>{entry.desc}</p>
                         <p>Technologies: <span className="techLbl">{entry.tech}</span></p>
                         </div>
                     )
@@ -74,6 +147,12 @@ export class Experience extends React.Component {
 
         return (
             <div>
+                {/* <div className="experience">
+                    <div className="workEntry">
+                        <div></div>
+                        <div className="companyLbl"><h2>Work Experience</h2></div>
+                    </div>
+                </div> */}
                 <h2>Work Experience</h2>
                 <div className="experience">
                     {workHistoryRender}
@@ -83,18 +162,18 @@ export class Experience extends React.Component {
     }
 }
 
-export class Education extends React.Component {
+export class TextList extends React.Component {
     render() {
-        const education = this.props.education
+        const entries = this.props.entries
         let eduRender = []
-        for (var entry of education) {
+        for (var entry of entries) {
             eduRender.push(
                 <p key={entry}>{entry}</p>
             )
         }
         return (
             <div className="edu">
-                <h2>Education</h2>
+                <h2>{this.props.title}</h2>
                 {eduRender}
             </div>
         )

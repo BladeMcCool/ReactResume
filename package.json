@@ -18,6 +18,6 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
-    "start": "webpack-dev-server --host 192.168.1.103 --port 8099 --content-base ./ --hot"
+    "start": "webpack-dev-server --host 192.168.1.103 --port 8099 --hot"
   }
 }

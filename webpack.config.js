@@ -29,5 +29,11 @@ module.exports = {
   },
   "entry": {
     "index": "./index"
+  },
+  // "devtool": "cheap-module-source-map",
+  "devtool": "#source-map",
+  "devServer": {
+  //   contentBase: "./",
+    writeToDisk: true,
   }
 };
