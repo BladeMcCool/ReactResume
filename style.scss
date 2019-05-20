@@ -4,30 +4,33 @@ $colorbg: #2B7099;
 $fat: 3px solid $dark;
 $skinny: 1px solid $dark;
 $none: 0px solid $dark;
+// $bold: font-weight; //: bold;
 
 body { background-color: $light; margin: 25px; font-family: sans-serif; color: $light}
 p { margin: 0px; font-size: 15px; }
-h6 { margin: 0px; }
-.header h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px; margin-bottom: 10px; }
-.header h3 { font-weight: normal; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 18px; }
-.header p { margin: 0px; border-top: $fat; padding-top: 10px; margin-top: 10px; }
-.hobbies span { margin-right: 40px; }
-div.resumeContainer { width: 210mm; text-align: left; background-color: $colorbg; padding: 15px; margin: 0 auto; }
-div.workEntry { border-bottom: $none; margin-bottom: 13px; }
-div.workEntry:last-child { border-bottom: 0px; margin-bottom: 0px;}
-div.project { border-top: $skinny; padding-top: 10px}
-.workEntry .description { margin-bottom: 0px; }
-.jobtitle { font-weight: bold; }
 h2 { border-top: $fat; margin-bottom: 10px; margin-top: 10px; padding-top: 10px; }
-.experience .workEntry { display: grid; grid-template-columns: 165px auto; break-inside: avoid; }
-.experience .project { display: grid; grid-template-columns: 100px auto; }
-.projectDesc p { margin-left: 10px; margin-bottom: 10px; }
-.projectDesc h6 { margin-left: 10px; margin-bottom: 10px; font-weight: normal;}
-.jobDesc p { margin-bottom: 10px; }
-.companyLbl p { font-weight: bold; }
-.techLbl { font-weight: bold; }
+h6 { margin: 0px; }
 a, a:visited, a:hover, a:active {  color: inherit; }
-.page2Header {page-break-before: always; }
+
+.header { 
+    h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px; margin-bottom: 10px; }
+    h3 { font-weight: normal; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 18px; }
+    p { margin: 0px; border-top: $fat; padding-top: 10px; margin-top: 10px; }
+}   
+
+div {
+    .resumeContainer { width: 210mm; text-align: left; background-color: $colorbg; padding: 15px; margin: 0 auto; }
+    .workEntry { 
+        display: grid; grid-template-columns: 165px auto; break-inside: avoid; border-bottom: $none; margin-bottom: 13px; 
+        .jobtitle { font-weight: bold; }
+        .companyLbl p { font-weight: bold; }
+        .techLbl { font-weight: bold; }
+        .hobbies span { margin-right: 40px; }
+        
+    }
+    .workEntry:last-child { border-bottom: $none; margin-bottom: 0px;}
+    .page2Header {page-break-before: always; }
+}
     
 @page { 
     size: auto;
