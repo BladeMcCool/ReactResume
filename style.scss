@@ -25,13 +25,12 @@ div {
         .jobtitle { font-weight: bold; }
         .companyLbl p { font-weight: bold; }
         .techLbl { font-weight: bold; }
-        .hobbies span { margin-right: 40px; }
-        
     }
     .workEntry:last-child { border-bottom: $none; margin-bottom: 0px;}
     .page2Header {page-break-before: always; }
+    .hobbies span { margin-right: 40px; }
 }
-    
+
 @page { 
     size: auto;
     margin: 10mm 10mm 10mm 10mm;  
