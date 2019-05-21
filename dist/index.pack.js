@@ -1023,7 +1023,7 @@ if (process.env.NODE_ENV === 'production') {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Hobbies = exports.TextList = exports.Experience = exports.Experience2 = exports.Header = undefined;
+exports.Hobbies = exports.TextList = exports.Experience = exports.ExperienceOrdered = exports.Header = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -1083,16 +1083,16 @@ var Header = exports.Header = function (_React$Component) {
     return Header;
 }(_react2.default.Component);
 
-var Experience2 = exports.Experience2 = function (_React$Component2) {
-    _inherits(Experience2, _React$Component2);
+var ExperienceOrdered = exports.ExperienceOrdered = function (_React$Component2) {
+    _inherits(ExperienceOrdered, _React$Component2);
 
-    function Experience2() {
-        _classCallCheck(this, Experience2);
+    function ExperienceOrdered() {
+        _classCallCheck(this, ExperienceOrdered);
 
-        return _possibleConstructorReturn(this, (Experience2.__proto__ || Object.getPrototypeOf(Experience2)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (ExperienceOrdered.__proto__ || Object.getPrototypeOf(ExperienceOrdered)).apply(this, arguments));
     }
 
-    _createClass(Experience2, [{
+    _createClass(ExperienceOrdered, [{
         key: 'work_history',
         value: function work_history() {
             var work_history = this.props.work_history;
@@ -1265,7 +1265,7 @@ var Experience2 = exports.Experience2 = function (_React$Component2) {
                 _react2.default.createElement(
                     'h2',
                     null,
-                    'Work Experience'
+                    'Work Experience ?'
                 ),
                 _react2.default.createElement(
                     'div',
@@ -1276,7 +1276,7 @@ var Experience2 = exports.Experience2 = function (_React$Component2) {
         }
     }]);
 
-    return Experience2;
+    return ExperienceOrdered;
 }(_react2.default.Component);
 
 var Experience = exports.Experience = function (_React$Component3) {
@@ -1464,7 +1464,7 @@ var Experience = exports.Experience = function (_React$Component3) {
                 _react2.default.createElement(
                     'h2',
                     null,
-                    'Work Experience'
+                    'Work Experience !!!'
                 ),
                 _react2.default.createElement(
                     'div',
@@ -1856,7 +1856,7 @@ var Resume = function (_React$Component) {
                 { className: 'resumeContainer' },
                 _react2.default.createElement(_ResumeParts.Header, { personal_info: _resumedata.resumeData.personal_info }),
                 _react2.default.createElement(_ResumeParts.TextList, { title: 'Key Skills', entries: _resumedata.resumeData.key_skills }),
-                _react2.default.createElement(_ResumeParts.Experience2, { work_history: _resumedata.resumeData.work_history }),
+                _react2.default.createElement(_ResumeParts.ExperienceOrdered, { work_history: _resumedata.resumeData.work_history }),
                 _react2.default.createElement(_ResumeParts.TextList, { title: 'Education', entries: _resumedata.resumeData.education }),
                 _react2.default.createElement(_ResumeParts.Hobbies, { hobbies: _resumedata.resumeData.hobbies })
             );
