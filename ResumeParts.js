@@ -14,7 +14,7 @@ export class Header extends React.Component {
     }
 }
 
-export class Experience2 extends React.Component {
+export class ExperienceOrdered extends React.Component {
     work_history() {
         const work_history = this.props.work_history
         let entries = []
@@ -143,7 +143,7 @@ export class Experience extends React.Component {
                         <div className="companyLbl"><h2>Work Experience</h2></div>
                     </div>
                 </div> */}
-                <h2>Work Experience</h2>
+                <h2>Work Experience !!!</h2>
                 <div className="experience">
                     {workHistoryRender}
                 </div>
