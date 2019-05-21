@@ -51,7 +51,7 @@ export class ExperienceOrdered extends React.Component {
             if (entry.pageBreakBefore) {
                 workHistoryRender.push(
                     <div key={x+"hdr"} className="page2Header">
-                        <h2>Work Experience Continued</h2>
+                        <h2>Work Experience Cont'd</h2>
                     </div>
                 )
             }

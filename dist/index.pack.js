@@ -1185,7 +1185,7 @@ var ExperienceOrdered = exports.ExperienceOrdered = function (_React$Component2)
                             _react2.default.createElement(
                                 'h2',
                                 null,
-                                'Work Experience Continued'
+                                'Work Experience Cont\'d'
                             )
                         ));
                     }
