@@ -27,7 +27,7 @@ export const resumeData = {
 			"location":"Victoria",
 			"jobtitle":"Open Source Developer",
 		},{
-			"desc":"This resume layout done in React/JSX/HTML5/SCSS. All work history and profile information defined in a data structure separate from the presentation, and some simple React components. Production webpack build done during automatic Travis CI deployment.",
+			"desc":"This resume layout done in React/JSX/HTML5/SCSS. All work history and profile information defined in a data structure separate from the presentation, and some simple React components. Webpack bundle is built and deployed to production environment automatically with Travis CI.",
 			"dates":"May 2019",
 			"sortdate":"2019-05-15",
 			"github":"https://github.com/BladeMcCool/ReactResume",
