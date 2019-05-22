@@ -42,5 +42,6 @@ div {
 }    
 @media print {
    body {color: black;  margin: 0px;}
+   div.printOff { display: none; }
 }
 

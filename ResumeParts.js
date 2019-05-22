@@ -49,14 +49,18 @@ export class ExperienceOrdered extends React.Component {
         for (var entry of work_history) {
             x++
             if (entry.pageBreakBefore) {
-                workHistoryRender.push(
+                workHistoryRender.push( 
                     <div key={x+"hdr"} className="page2Header">
                         <h2>Work Experience Cont'd</h2>
                     </div>
                 )
             }
+            let entryClassName = 'workEntry';
+            if (entry.printOff) {
+                entryClassName = 'printOff ' + entryClassName
+            }
             workHistoryRender.push(
-                <div key={x} className="workEntry">
+                <div key={x} className={entryClassName}>
                     <div className="dateLbl">
                         <p>{entry.company}, {entry.location}</p>
                         <p>{entry.dates ? entry.dates : entry.daterange}</p>
