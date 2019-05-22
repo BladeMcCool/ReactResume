@@ -10,7 +10,7 @@ export const resumeData = {
 		"Developing backend solutions, integrations and microservices with Golang, Python, Node.js, Perl, and PHP",
 		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS",
 		"Handling data with MySQL, Postgres, Redis, RDS, Redshift, RabbitMQ, and more",
-		"Using tools like Linux, Nginx, Travis CI, AWS, [Coming soon: Docker] and more",
+		"Using tools like Linux, Nginx, Travis CI, AWS, and more",
 	],
 	"work_history"	: [{
 		"company":"CHWS",

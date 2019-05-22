@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -e
+set -e
 # ssh resume@chws.ca -v exit
 
 git config --global push.default simple # we only want to push one branch — master
