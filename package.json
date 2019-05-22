@@ -19,6 +19,7 @@
     "build": "webpack",
     "watch": "webpack -w",
     "//": "start .... webpack-dev-server --host 192.168.1.103 --port 8099 --hot",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "test/build.sh"
   }
 }
