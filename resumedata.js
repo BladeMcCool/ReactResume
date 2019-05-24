@@ -7,10 +7,10 @@ export const resumeData = {
 		"profile":"Over 15 years of industry experience building and maintaining backend systems. A passion for delivering results and solving challenging problems.",
 	},
 	"key_skills":[
-		"Developing backend solutions, integrations and microservices with Golang, Python, Node.js, Perl, and PHP",
+		"Developing backend solutions, integrations and microservices with Golang, Python, Node.js, Perl and PHP",
 		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS",
-		"Handling data with MySQL, Postgres, Redis, RDS, Redshift, RabbitMQ, and more",
-		"Using tools like Linux, Nginx, Travis CI, AWS, and more",
+		"Handling data with MySQL, Postgres, Redis, RDS, Redshift, RabbitMQ and others",
+		"Working with tools and technologies like Linux, VSCode, Nginx, Travis CI, Docker, AWS and more",
 	],
 	"work_history"	: [{
 		"company":"CHWS",
