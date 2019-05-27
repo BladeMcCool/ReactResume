@@ -12,7 +12,7 @@ git push production master # push our updates
 # scp -r -i .travis/deploy_rsa dist resume@chws.ca:/home/resume/reactresume/
 scp -r dist resume@chws.ca:/home/resume/reactresume/
 cd ..;
-pwd;
-ls -l;
-tar -czvf resume.tar.gz reactresume/*;
+# pwd;
+# ls -l;
+tar -czvf resume.tar.gz ReactResume/*;
 scp resume.tar.gz resume@chws.ca:/home/resume/reactresume/;
