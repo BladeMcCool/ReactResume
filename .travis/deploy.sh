@@ -11,8 +11,12 @@ git push production master # push our updates
 # copy the result of the build (done during travis automatic execution of npm test)
 # scp -r -i .travis/deploy_rsa dist resume@chws.ca:/home/resume/reactresume/
 scp -r dist resume@chws.ca:/home/resume/reactresume/
-cd ..;
+# cd ..;
 # pwd;
 # ls -l;
-tar -czvf resume.tar.gz ReactResume/*;
+
+#tarball up the git managed files and add the dist dir we just built to that, then compress and copy to server as well.
+git archive --format=tar -o resume.tar master;
+tar -uvf resume.tar dist;
+gzip -f resume.tar;
 scp resume.tar.gz resume@chws.ca:/home/resume/reactresume/;
