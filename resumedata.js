@@ -23,7 +23,7 @@ export const resumeData = {
 			"dates":"April 2019",
 			"sortdate":"2019-04-27",
 			"github":"https://github.com/BladeMcCool/goober",
-			"tech":"Golang, Nginx, JavaScript, HTML5, LND, Bitcoind, VS-Code",
+			"tech":"Golang, Nginx, JavaScript, HTML5, LND, Bitcoind, VSCode",
 			"location":"Victoria",
 			"jobtitle":"Open Source Developer",
 		},{

@@ -11,3 +11,6 @@ git push production master # push our updates
 # copy the result of the build (done during travis automatic execution of npm test)
 # scp -r -i .travis/deploy_rsa dist resume@chws.ca:/home/resume/reactresume/
 scp -r dist resume@chws.ca:/home/resume/reactresume/
+cd ..
+tar -czvf resume.tar.gz resume/*
+scp resume.tar.gz resume@chws.ca:/home/resume/reactresume/
