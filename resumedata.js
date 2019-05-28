@@ -31,7 +31,7 @@ export const resumeData = {
 			"dates":"May 2019",
 			"sortdate":"2019-05-15",
 			"github":"https://github.com/BladeMcCool/ReactResume",
-			"tech":"React, HTML5, Travis CI",
+			"tech":"React, HTML5, Docker, Travis CI",
 			"location":"Victoria",
 			"jobtitle":"Open Source Developer",
 			"printOff":true,
