@@ -1,10 +1,11 @@
+/* cSpell:enable */
 export const resumeData = {
 	"personal_info":{
 		"name":"Chris A. Hagglund",
 		"email":"chris@chws.ca",
 		"phone":"250-532-9694",
 		"location":"1635 Cook St, Victoria BC",
-		"profile":"Over 15 years of industry experience building and maintaining backend systems. A passion for delivering results and solving challenging problems.",
+		"profile":"Over 15 years of industry experience building and maintaining backend systems. A passion for solving challenging problems, delivering results and improving organizational efficiency.",
 	},
 	"key_skills":[
 		"Developing backend solutions, integrations and microservices with Golang, Python, Node.js, Perl and PHP",
@@ -112,7 +113,7 @@ export const resumeData = {
 		"tech":"Perl, Oracle, Bash, Unix, Visio 2000"
 	}],
 	"education":[
-		"Humber College (Toronto, 3 year Computer/Programmer/Analyst Diploma, May 2002)",
+		"Humber College (Toronto, 3 year Computer Programmer/Analyst Diploma, May 2002)",
 		"CompTIA A+ (Computer Service Technician Certification, Toronto, 2000)",
 		"White Oaks Secondary School (Oakville, OSSD, June 1999)",
 	],
@@ -121,5 +122,18 @@ export const resumeData = {
 		"Cooking",
 		"Learning",
 		"Bitcoin",
-	]
+	],
+	"jobs":[{
+		"title":"Senior Software Developer",
+		"tag":"seniordev"
+	},{
+		"title":"Intermediate Software Developer",
+		"tag":"itermeddev"
+	},{
+		"title":"Software Developer",
+		"tag":"dev"
+	},{
+		"title":"Customer Service",
+		"tag":"service"
+	}]
 }

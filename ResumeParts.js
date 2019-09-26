@@ -193,3 +193,9 @@ export class Hobbies extends React.Component {
         )
     }
 }
+
+export class JobTitleSelector extends React.Component {
+    render() {
+        return (<p>test</p>)
+    }
+}
