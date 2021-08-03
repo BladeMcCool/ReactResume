@@ -9,9 +9,9 @@ export const resumeData = {
 	},
 	"key_skills":[
 		"Developing backend solutions, integrations and microservices with Golang, Python, Node.js, Perl and PHP",
-		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS",
-		"Handling data with MySQL, Postgres, Redis, RDS, Redshift, RabbitMQ and others",
-		"Working with tools and technologies like Linux, VSCode, Nginx, Travis CI, Docker, AWS and more",
+		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS", //<-- debating removing this one as I'm really not interested in doing anything to do with frontend stuff at this time.
+		"Handling data with Postgres, MySQL, Redis, RDS, Redshift, RabbitMQ and others",
+		"Working with tools and technologies like Docker, AWS, Kubernetes, Jenkins, JetBrains IDEs and more",
 	],
 	"work_history"	: [{
 		"company":"CHWS",
@@ -20,7 +20,15 @@ export const resumeData = {
 		"jobtitle":"Senior Software Developer",
 		"daterange": "2010 - Present",
 		"projects":[{
-			"desc":"Web integration of bitcoin lightning network payments for earmarked charitable donations. Generate invoice and present payment request to user, plus show invoice paid status when paid. Live on chws.ca/donate",
+			"desc":"Censorship resistant decentralized social media and encrypted messaging proof of concept/prototype based on blockchain datastructures using RSA public keys as identities, hosted in IPFS on end-user devices with redundancy in the cloud.",
+			"dates":"March 2021",
+			"sortdate":"2021-03-15",
+			"github":"https://github.com/BladeMcCool/IPFS-Social-Graph",
+			"tech":"Golang, ES6, IPFS, Docker",
+			"location":"Victoria",
+			"jobtitle":"Open Source Developer",
+		},{
+			"desc":"Web integration of bitcoin lightning network payments for earmarked charitable donations. Generate invoice and present payment request to user, plus show invoice paid status when paid.",
 			"dates":"April 2019",
 			"sortdate":"2019-04-27",
 			"github":"https://github.com/BladeMcCool/goober",
@@ -62,8 +70,16 @@ export const resumeData = {
 			"github":"https://github.com/BladeMcCool/BitcoinIVR",
 			"location":"Victoria",
 			"jobtitle":"Open Source Developer",
-			"pageBreakBefore":true,
 		}]
+	},{
+		"company":"Telmediq/PerfectServe",
+		"companydesc":"Clinical Communication and Collaboration",
+		"location":"Victoria",
+		"jobtitle":"Software Engineer",
+		"desc":"Interactive SMS-based survey microservice for patient followup, web API implemented with Dnajgo/Python, making use of Twilio for SMS communication. Integrations with third party scheduling systems to coordinate and sync physician schedules with existing client IT infrastructure. Adding features to and fixing issues in various microservices throughout the organization.",
+		"tech":"Django/Python, Golang, Kubernetes, Spinnaker, Postgres, Twilio",
+		"daterange": "Oct 2019 - Present",
+		"sortdate":"2021-08-15",
 	},{
 		"company":"Go2mobi",
 		"companydesc":"Mobile Advertising Self-Serve DSP",
@@ -94,6 +110,7 @@ export const resumeData = {
 			"tech":"CFM, PHP, MySQL",
 			"location":"Remote",
 			"sortdate":"2011-06-01",
+			"pageBreakBefore":true,
 		},{
 			"desc":"Improved the machine-generated output of some y2k-era web tools to add additional server side (vbscript asp) and client side functionality related to a content management system that was being developed, as well as database table setup for localisation with different languages.",
 			"dates":"1999",
@@ -119,9 +136,9 @@ export const resumeData = {
 	],
 	"hobbies":[
 		"Hiking",
-		"Cooking",
 		"Learning",
-		"Bitcoin",
+		"Property Development",
+		"Japanese",
 	],
 	"jobs":[{
 		"title":"Senior Software Developer",
