@@ -17,12 +17,8 @@ $ npm run build
 
 ## Development
 
-Run Webpack in watch-mode to continually compile the JavaScript as you work:
+Run Webpack with a hot reloading dev server:
 
 ```
-$ npm run watch
-```
-Or with a hot reloading dev server (you'll want to edit the package.json entry for this one since i've got it hardcoded to bind to my internal network ip so i can reach it over my local network)
-```
-$ npm run start
+$ npm start
 ```
