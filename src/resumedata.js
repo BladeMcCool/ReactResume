@@ -91,8 +91,8 @@ export const resumeData = {
 		"companydesc":"Bitcoin Exchange",
 		"location":"Remote",
 		"jobtitle":"Software Engineer II",
-		"desc":"Built custom terraform providers to maintain state with web service APIs, oversaw needed improvements to custom in-house nomad job deployment audit trail tooling, integrated testing tools with gmail API, consolidated divergent isolated test runner tooling across multiple repos with a standardized testing kit for use in CI pipelines and local execution",
-		"tech":"Golang, Terraform, Docker, Nomad, Vault, GitLabCI, Bash scripting, Rust, ChatGPT",
+		"desc":"Built custom Terraform provider to maintain state with web service APIs, oversaw needed improvements to custom internal production job deployment audit trail tooling, integrated testing tools with gmail API, consolidated divergent isolated test runner tooling across multiple repos with a standardized testing kit for use in CI pipelines and local execution",
+		"tech":"Golang, Docker, Rust, Nomad, Vault, GitLabCI, Bash scripting, Terraform, ChatGPT",
 		"daterange": "Jan 2022 - Mar 2024",
 		"sortdate":"2024-03-11",
 	},{

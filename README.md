@@ -6,7 +6,7 @@ Number one is that I couldnt make break-before, page-break-before or their varia
 
 Number two is that the print-to-pdf (via windows Microsoft PDF writer) *looks way better from firefox than from Chrome*. ymmv of course.
 
-# React simple setup
+# React simple setup (done with node 21.6.2)
 
 Quick start:
 
