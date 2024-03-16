@@ -23,7 +23,7 @@ export const resumeData = {
 			//consolidated all these personal project type things into one entry for conciseness, and hide all the individual entries. Some of this stuff was my consulting for a client, some was just for me.
 			"desc":"Developed fun and interesting projects including a decentralized social network system built on IPFS, a bitcoin lightning network donation invoice system for a website, a captcha solving game exploiting 4chan users, a hosted bitcoin wallet that can be interacted with using touch tone telephone, and this CV in react.",
 			"sortdate":"2012-01-01",
-			"tech":"Golang, Docker, Nginx, Python, JavaScript, Node.js, ES6, Perl, HTML5, React, MySQL, Redis, Asterisk, IPFS, LND, Bitcoind, VSCode, and web automation tools",
+			"tech":"Golang, Docker, Nginx, Git, Python, JavaScript, Node.js, ES6, Perl, HTML5, React, MySQL, Redis, Asterisk, IPFS, LND, Bitcoind, VSCode, Github Actions",
 			"github":"https://github.com/BladeMcCool",
 			"location":"Remote",
 			"jobtitle":"Open Source Developer",
