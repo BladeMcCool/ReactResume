@@ -20,7 +20,7 @@ a, a:visited, a:hover, a:active {  color: inherit; }
 div {
     .resumeContainer { text-align: left; background-color: $colorbg; padding: 10px; margin: 0 auto; max-width: 800px; }
     .workEntry {
-        display: grid; grid-template-columns: 20vw auto; grid-gap: 10px; break-inside: avoid; border-bottom: $none; margin-bottom: 13px;
+        display: grid; grid-template-columns: 150px auto; grid-gap: 10px; break-inside: avoid; border-bottom: $none; margin-bottom: 13px;
         .jobtitle { font-weight: bold; }
         .dateLbl { overflow: hidden; }
         .companyLbl p { font-weight: bold; }
