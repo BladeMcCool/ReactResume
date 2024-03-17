@@ -1,4 +1,4 @@
 node_modules
-workspace.code-workspace
-dist/*
+build
 .vscode
+.idea

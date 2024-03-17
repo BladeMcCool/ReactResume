@@ -1,5 +1,5 @@
 import React from 'react';
-import {clone, assign} from 'lodash';
+import {assign} from 'lodash';
 
 export class Header extends React.Component {
     render() {

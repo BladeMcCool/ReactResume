@@ -20,11 +20,11 @@ export const resumeData = {
 		"jobtitle":"Senior Software Developer",
 		"daterange": "2010 - Present",
 		"projects":[{
-			//consolidated all these personal project type things into one entry for conciseness, and hide all the individual entries. Some of this stuff was my consulting for a client, some was just for me.
+			//consolidate all these personal project type things into one entry for conciseness, and hide all the individual entries. Some of this stuff was my consulting for a client, some was just for me.
 			"desc":"Developed fun and interesting projects including a decentralized social network system built on IPFS, a bitcoin lightning network donation invoice system for a website, a captcha solving game exploiting 4chan users, a hosted bitcoin wallet that can be interacted with using touch tone telephone, and this CV in react.",
 			"sortdate":"2012-01-01",
 			"tech":"Golang, Docker, Nginx, Git, Python, JavaScript, Node.js, ES6, Perl, HTML5, React, MySQL, Redis, Asterisk, IPFS, LND, Bitcoind, VSCode, Github Actions",
-			"github":"https://github.com/BladeMcCool",
+			"github":"https://github.com/BladeMcCool/ReactResume",
 			"location":"Remote",
 			"jobtitle":"Open Source Developer",
 		},{
@@ -96,7 +96,7 @@ export const resumeData = {
 		"daterange": "Jan 2022 - Mar 2024",
 		"sortdate":"2024-03-11",
 	},{
-		"company":"Telmediq/PerfectServe",
+		"company":"PerfectServe/Telmediq",
 		"companydesc":"Clinical Communication and Collaboration",
 		"location":"Victoria",
 		"jobtitle":"Software Engineer",
