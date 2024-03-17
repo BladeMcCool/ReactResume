@@ -1,5 +1,5 @@
 import React from 'react';
-import {clone, assign} from 'lodash';
+import {assign} from 'lodash';
 
 export class Header extends React.Component {
     render() {
@@ -19,10 +19,12 @@ export class ExperienceOrdered extends React.Component {
         const work_history = this.props.work_history
         let entries = []
         for (var entry of work_history) {
+            if (entry.hide) { continue }
             if (entry.desc) {
                 entries.push(entry)
             } else {
                 for (var project of entry.projects) {
+                    if (project.hide) { continue }
                     var projEntry = {}
                     assign(projEntry, entry, project)
                     entries.push(projEntry)

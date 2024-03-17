@@ -4,25 +4,25 @@ $colorbg: #2B7099;
 $fat: 3px solid $dark;
 $skinny: 1px solid $dark;
 $none: 0px solid $dark;
-// $bold: font-weight; //: bold;
 
-body { background-color: $light; margin: 25px; font-family: sans-serif; color: $light}
+body { background-color: $light; margin: 10px; font-family: sans-serif; color: $light}
 p { margin: 0px; font-size: 15px; }
 h2 { border-top: $fat; margin-bottom: 10px; margin-top: 10px; padding-top: 10px; }
 h6 { margin: 0px; }
 a, a:visited, a:hover, a:active {  color: inherit; }
 
-.header { 
+.header {
     h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px; margin-bottom: 10px; }
     h3 { font-weight: normal; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 18px; }
     p { margin: 0px; border-top: $fat; padding-top: 10px; margin-top: 10px; }
-}   
+}
 
 div {
-    .resumeContainer { width: 210mm; text-align: left; background-color: $colorbg; padding: 15px; margin: 0 auto; }
-    .workEntry { 
-        display: grid; grid-template-columns: 165px auto; break-inside: avoid; border-bottom: $none; margin-bottom: 13px; 
+    .resumeContainer { text-align: left; background-color: $colorbg; padding: 10px; margin: 0 auto; max-width: 800px; }
+    .workEntry {
+        display: grid; grid-template-columns: 20% auto; grid-gap: 10px; break-inside: avoid; border-bottom: $none; margin-bottom: 13px;
         .jobtitle { font-weight: bold; }
+        .dateLbl { overflow: hidden; }
         .companyLbl p { font-weight: bold; }
         .techLbl { font-weight: bold; }
     }
@@ -31,15 +31,15 @@ div {
     .hobbies span { margin-right: 40px; }
 }
 
-@page { 
+@page {
     size: auto;
-    margin: 10mm 10mm 10mm 10mm;  
+    margin: 10mm 10mm 10mm 10mm;
 }
 @media screen {
     .page2Header {
         display: none;
     }
-}    
+}
 @media print {
    body {color: black;  margin: 0px;}
    div.printOff { display: none; }
