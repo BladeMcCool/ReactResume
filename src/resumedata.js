@@ -8,8 +8,9 @@ export const resumeData = {
 		"profile":"Over 20 years of industry experience building and maintaining backend systems. A passion for solving challenging problems, delivering results and improving organizational efficiency. Now with AI!",
 	},
 	"key_skills":[
+		"Analysing and solving problems; Proficient in self-directed learning; Adaptable to new languages, tools and frameworks; Experienced in both back-end and front-end development environments",
 		"Developing backend solutions, integrations and microservices with Golang, Python, Rust and Node.js",
-		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS", //truly, I'm really not interested in doing anything to do with frontend stuff at this time.
+		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS",
 		"Handling data with Postgres, MySQL, Redis, AMQP and others", //lets play with a vector db then put it on the list whee
 		"Working with tools and technologies like Docker, LLMs, AWS, Kubernetes, JetBrains IDEs, CI systems and more",
 	],
