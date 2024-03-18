@@ -22,18 +22,21 @@ jobs:
       - name: Log in to GitHub Docker Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Build and push Docker image with ref sha and name
-        run: |
-          docker build .  -t ghcr.io/blademccool/resume:${{ github.sha }}
-          docker tag ghcr.io/blademccool/resume:${{ github.sha }} ghcr.io/blademccool/resume:${{ github.ref_name }}
-          docker push ghcr.io/blademccool/resume:${{ github.sha }}
-          docker push ghcr.io/blademccool/resume:${{ github.ref_name }}
+#      - name: Build and push Docker image with ref sha and name
+#        run: |
+#          docker build .  -t ghcr.io/blademccool/resume:${{ github.sha }}
+#          docker tag ghcr.io/blademccool/resume:${{ github.sha }} ghcr.io/blademccool/resume:${{ github.ref_name }}
+#          docker push ghcr.io/blademccool/resume:${{ github.sha }}
+#          docker push ghcr.io/blademccool/resume:${{ github.ref_name }}
 
-        # trigger pipeline in website repo (todo, see Deploy stage of website for similar concept triggering digital ocean deploy tho)
-#      - name: Deploy via Website repo
-#        run: >
-#          curl -H "Accept: application/vnd.github.everest-preview+json" \
-#              -H "Authorization: token ${{ secrets.WEBSITE_PIPELINE_PAT }}" \
-#              --request POST \
-#              --data '{"event_type": "resume_update", "client_payload": { "ref": "${{ github.ref_name }}"}}' \
-#              https://api.github.com/repos/BladeMcCool/chws.ca/dispatches
+        # trigger pipeline in website repo
+        # this requires a PAT, and it does not allow the classic style that allow no expiry.
+        # WEBSITE_PIPELINE_PAT is a fine-grained one targeting the chws.ca repo which includes "Read and Write" for both Actions and Contents (it didnt work without Contents, havent verified if Actions is actually even needed)
+      - name: Deploy via Website repo
+        if: github.event_name == 'push' # only after pushing directly or merging into master tho
+        run: >
+          curl -sS -H "Accept: application/vnd.github.everest-preview+json" \
+            -H "Authorization: token ${{ secrets.WEBSITE_PIPELINE_PAT }}" \
+            --request POST \
+            --data '{"event_type": "subcomponent_updated", "client_payload": { "component":"resume", "ref":"${{ github.ref_name }}"}}"}}' \
+            https://api.github.com/repos/BladeMcCool/chws.ca/dispatches
