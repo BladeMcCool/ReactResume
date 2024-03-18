@@ -9,10 +9,10 @@ export const resumeData = {
 	},
 	"key_skills":[
 		"Analysing and solving problems; Proficient in self-directed learning; Adaptable to new languages, tools and frameworks; Experienced in both back-end and front-end development environments",
-		"Developing backend solutions, integrations and microservices with Golang, Python, Rust and Node.js",
-		"Building and supporting web apps with HTML5, Javascript/ES6, React, REST, SCSS",
-		"Handling data with Postgres, MySQL, Redis, AMQP and others", //lets play with a vector db then put it on the list whee
-		"Working with tools and technologies like Docker, LLMs, AWS, Kubernetes, JetBrains IDEs, CI systems and more",
+		"Developing backend solutions, integrations and microservices; With Golang, Python, Rust and Node.js",
+		"Building and supporting web apps; With HTML5, Javascript/ES6, React, REST, SCSS",
+		"Handling data; With Postgres, MySQL, Redis, AMQP and others", //lets play with a vector db then put it on the list whee
+		"Working with a variety of tools; Experienced with Docker, LLMs, AWS, Kubernetes, JetBrains IDEs, CI systems and more",
 	],
 	"work_history"	: [{
 		"company":"CHWS",
