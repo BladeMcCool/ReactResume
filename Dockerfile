@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of your app's source code
 COPY . .
 
+# build the static website section
+RUN npm run build
+
 # Expose port 3000 to the outside world
 EXPOSE 3000
 
