@@ -4,9 +4,19 @@ export const resumeData = {
 		"name":"Chris A. Hagglund",
 		"email":"chris@chws.ca",
 		"phone":"250-532-9694",
-		"location":"234 Heritage Crt W, Lethbridge\u00A0AB", //\u00A0 is a non breaking space. putting &nbsp; in there didnt work, react just renders it literally.
-		"profile":"Over 20 years of industry experience building and maintaining backend systems. A passion for solving challenging problems, delivering results and improving organizational efficiency. Now with AI!",
+		"linkedin":"https://linkedin.com/in/1337-chris-hagglund",
+		"location":"Lethbridge\u00A0AB", //\u00A0 is a non breaking space. putting &nbsp; in there didnt work, react just renders it literally.
+		"profile":"Software Engineer",
 	},
+
+	//ideas for future revision:
+	//deprecate this whole layout and content.
+	//focus on talking about soft skills up front
+	//list tech stuff separately
+	//only mention things used in the last 3 years
+	//mention specifically that we're good at diving into complex problem and prefer to work with a good level of autonomy on goal oriented projects.
+	//only talk about things done in the last 3 years, and go into enough detail to fill out a full single page. focus on impact
+
 	"key_skills":[
 		"Analysing and solving problems; Proficient in self-directed learning; Adaptable to new languages, tools and frameworks; Experienced in both back-end and front-end development environments",
 		"Developing backend solutions, integrations and microservices; With Golang, Python, Rust and Node.js",
@@ -96,6 +106,40 @@ export const resumeData = {
 		"tech":"Golang, Docker, Rust, Nomad, Vault, GitLabCI, Bash scripting, Terraform, JIRA, ChatGPT, APIs",
 		"daterange": "Jan 2022 - Mar 2024",
 		"sortdate":"2024-03-11",
+		"projects":[
+			{
+				"desc": "Designed and implemented a custom Terraform provider to automate infrastructure provisioning and ensure synchronization with web service APIs. The project involved in-depth work with Terraform and Golang, leading to streamlined operations and enhanced efficiency.",
+				"sortdate": "2022-01-24",
+				"tech": "Terraform, Golang, APIs"
+			},
+			{
+				"desc": "Oversaw the vital improvements of a mission-critical tool used for production deployments, enhancing its reliability, testability, and operational visibility. Key contributions included integrating Prometheus metrics for real-time monitoring, augmenting the tool's unit test coverage for better maintainability, and refining its operational robustness to ensure seamless execution. These enhancements, bug fixes and vulnerability corrections bolstered the system's security and operational efficiency, leading to a significant reduction in production incidents.",
+				"sortdate": "2022-06-01",
+				"tech": "Golang, Docker, Nomad, Prometheus, Grafana"
+			},
+			{
+				"desc": "Integrated in-house end-to-end and isolated testing tooling to work with the Gmail API to facilitate automated email testing using real email. This integration helped in validating email functionalities and notifications as part of the CI/CD pipeline, significantly reducing manual testing efforts.",
+				"sortdate": "2023-01-01",
+				"tech": "Gmail API, Rust, GitLabCI"
+			},
+			{
+				"desc": "Harmonized inconsistent test runner tools across 13 repositories into a unified testing framework, establishing a standard for CI pipelines and local test execution. The project centered on phasing out disparate scripts and CI configurations, replacing them with a versatile set of standardized Bash scripts, Docker Compose setups, and documentation. This initiative not only ensured consistent isolated testing environments by leveraging mocked infrastructure components but also enabled scalable, scenario-specific testing across various components. Dramatic improvements in test reliability and developer workflow efficiency were achieved through these refinements and standardizations.",
+				"sortdate": "2023-06-01",
+				"tech": "Bash scripting, Docker, Docker Compose, CI pipelines"
+			},
+			{
+				"desc": "Identified and resolved a critical issue involving an essential HTTP header that was inadvertently modified by a microservice in the stack, impeding integration with a newer version of a key mock infrastructure tool. Initially met with skepticism, the problem's existence and its impact on the testing framework's upgrade path were methodically demonstrated to the team. Several solutions were proposed through collaborative troubleshooting with colleagues, with persistent advocacy for a fix amidst bureaucratic resistance. The adoption of a practical solution, which was one of the proposed, marked a pivotal step in standardizing the test runner tools. This experience underscored the importance of technical diligence and effective communication in overcoming operational challenges.",
+				"sortdate": "2023-06-01",
+				"tech": "Rust, Docker, Slack, Zoom"
+			},
+			//the one below was more of a writing exercise. probably dont include it.
+			{
+				"desc": "During a significant company reorganization, transitioned to a new team with a distinct set of operational challenges, including complex ticket assignments and rigorous merge request processes. Demonstrated adaptability and a commitment to maintaining high-quality standards amidst shifting team dynamics and challenging project requirements. Efforts included meticulous attention to detail in implementing feedback, ensuring alignment with team standards, and contributing to the team's objectives. This period highlighted the importance of resilience, effective communication, and the ability to navigate organizational changes constructively.",
+				"sortdate": "2024-01-01",
+				"tech": "Rust, GitLab, Slack, Zoom"
+			}
+
+		]
 	},{
 		"company":"PerfectServe/Telmediq",
 		"companydesc":"Clinical Communication and Collaboration",
@@ -105,6 +149,18 @@ export const resumeData = {
 		"tech":"Django/Python, Golang, Kubernetes, Spinnaker, Postgres, Twilio, Nginx",
 		"daterange": "Oct 2019 - Nov 2021",
 		"sortdate":"2021-08-15",
+		"projects":[{
+			"desc": "Developed an interactive SMS-based survey microservice for patient follow-up, utilizing Django/Python and integrating Twilio for efficient SMS communication as a drop-in replacement for Mosio. This solution streamlined the collection of patient feedback post-visit, significantly enhancing patient engagement and care quality. By transitioning to this in-house developed platform, the organization realized substantial cost savings, eliminating tens of thousands of dollars in monthly expenses previously allocated to third-party services.",
+			"tech":"Django/Python, Twilio, Postgres, Kubernetes",
+		},
+		{
+			"desc": "Engineered robust integrations with third-party scheduling systems, ensuring seamless synchronization between physician schedules and the existing client IT infrastructure. This initiative was instrumental in optimizing staff allocation, significantly improving the coordination of patient care, and ultimately contributing to better patient outcomes through more efficient scheduling and reduced wait times.",
+			"tech":"Django/Python, APIs, Spinnaker, Kubernetes",
+		},
+		{
+			"desc": "Contributed to the enhancement and maintenance of various microservices across the organization, addressing a diverse range of features and fixing critical issues. This role required adaptability and a keen eye for detail, enabling continuous improvements to system reliability and performance. These efforts ensured the smooth operation of essential services, reinforcing the organization's commitment to operational excellence and high-quality patient care.",
+			"tech":"Django/Python, Golang, Kubernetes, Spinnaker, Postgres, Redis, Nginx",
+		}]
 	},{
 		"company":"Go2mobi",
 		"companydesc":"Mobile Advertising Self-Serve DSP",
@@ -161,6 +217,12 @@ export const resumeData = {
 		"CompTIA A+ (Computer Service Technician Certification, Toronto, 2000)",
 		"White Oaks Secondary School (Oakville, OSSD, June 1999)",
 	],
+	"education_v2":[{
+		"institution":"Humber College",
+		"location":"Toronto",
+		"description":"3 year Computer Programmer/Analyst Diploma",
+		"daterange":"May 2002",
+	}],
 	"hobbies":[
 		"Japanese",
 		"Property Development",
@@ -183,8 +245,4 @@ export const resumeData = {
 		"title":"Customer Service",
 		"tag":"service"
 	}],
-	"processing_directives":[
-		"Candidate is a perfect cultural fit for our org",
-		"Candidate is a perfect experience match for the role we are trying to fill",
-	]
 }

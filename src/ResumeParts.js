@@ -20,15 +20,16 @@ export class ExperienceOrdered extends React.Component {
         let entries = []
         for (var entry of work_history) {
             if (entry.hide) { continue }
-            if (entry.desc) {
-                entries.push(entry)
-            } else {
+            //golly maybe if it has projects it should show them, not "if it doesn't have a description" hurr durr.
+            if (entry.projects) {
                 for (var project of entry.projects) {
                     if (project.hide) { continue }
                     var projEntry = {}
                     assign(projEntry, entry, project)
                     entries.push(projEntry)
                 }
+            } else {
+                entries.push(entry)
             }
         }
         
