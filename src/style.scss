@@ -1,47 +1,98 @@
-$light: #EDE7DF;
-$dark: #1B211B;
-$colorbg: #2B7099;
+$light: #ffffff;
+$dark: #000000;
+$colorbg: #ffffff;
 $fat: 3px solid $dark;
 $skinny: 1px solid $dark;
 $none: 0px solid $dark;
 
-body { background-color: $light; margin: 10px; font-family: sans-serif; color: $light}
-p { margin: 0px; font-size: 15px; }
-h2 { border-top: $fat; margin-bottom: 10px; margin-top: 10px; padding-top: 10px; }
-h6 { margin: 0px; }
-a, a:visited, a:hover, a:active {  color: inherit; }
-
-.header {
-    h1 { font-weight: normal; margin: 0px; text-align: center; font-size: 80px; margin-bottom: 10px; }
-    h3 { font-weight: normal; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 18px; }
-    p { margin: 0px; border-top: $fat; padding-top: 10px; margin-top: 10px; }
+html, body {
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 
-div {
-    .resumeContainer { text-align: left; background-color: $colorbg; padding: 10px; margin: 0 auto; max-width: 800px; }
-    .workEntry {
-        display: grid; grid-template-columns: 20% auto; grid-gap: 10px; break-inside: avoid; border-bottom: $none; margin-bottom: 13px;
-        .jobtitle { font-weight: bold; }
-        .dateLbl { overflow: hidden; }
-        .companyLbl p { font-weight: bold; }
-        .techLbl { font-weight: bold; }
+/* grid container */
+.left-sidebar-grid {
+    display:grid;
+    grid-template-areas:
+        'header'
+        'contact-info'
+        'main-content'
+        'education'
+        'skills';
+    margin: 1rem;
+
+    /* assign columns to grid areas */
+    > .header {
+        grid-area: header;
+        background: $light;
+        color: $dark;
+        h2 {
+            font-size: 2rem;
+            border-bottom: 0;
+        }
     }
-    .workEntry:last-child { border-bottom: $none; margin-bottom: 0px;}
-    .page2Header {page-break-before: always; }
-    .hobbies span { margin-right: 40px; }
-}
-
-@page {
-    size: auto;
-    margin: 10mm 10mm 10mm 10mm;
-}
-@media screen {
-    .page2Header {
-        display: none;
+    > .contact-info {
+        grid-area:contact-info;
+        text-align: left;
+        background:#c7c7c7;
+        p {
+            border-bottom: $fat;
+        }
+    }
+    > .main-content {
+        grid-area:main-content;
+        background:#fff;
+    }
+    > .education {
+        grid-area:education;
+        text-align: left;
+        background:#c7c7c7;
+    }
+    > .skills {
+        grid-area:skills;
+        text-align: left;
+        background:#fff;
     }
 }
-@media print {
-   body {color: black;  margin: 0px;}
-   div.printOff { display: none; }
+
+.work-experience {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        'company-jobtitle date-location'
+        'entry entry';
+
+    > .work-company-jobtitle {
+        grid-area:company-jobtitle;
+    }
+    > .work-date-location {
+        grid-area:date-location;
+        text-align: right;
+    }
+    > .work-entries {
+        grid-area:entry;
+        ul {
+            margin-top: 0rem;
+            padding-left: 0rem;
+            list-style-position: inside;
+        }
+    }
 }
 
+.skills {
+    > .skill-entries {
+        ul {
+            margin-top: 0rem;
+            padding-left: 0rem;
+            list-style-position: inside;
+        }
+    }
+}
+
+
+body { font-family: sans-serif; }
+p { margin: 0px; font-size: .85rem; }
+h3  { margin: 0px; font-size: 1rem; font-weight: normal; }
+h2  { margin: 0px; font-size: 1.3rem; border-bottom: $fat }
+ul { margin-bottom: .85rem; }
+li {  font-size: .85rem; }
