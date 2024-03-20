@@ -28,7 +28,7 @@ export const resumeData = {
 	"work_history"	: [{
 		"company":"CHWS",
 		"companydesc":"Software Development Consultancy",
-		"location":"Victoria, BC",
+		"location":"Lethbridge, AB",
 		"jobtitle":"Senior Software Developer",
 		"daterange": "2010 - Present",
 		"sortdate": "2011-01-01",
@@ -110,13 +110,13 @@ export const resumeData = {
 		"sortdate":"2024-03-11",
 		"projects":[
 			{
-				"desc":"Oversaw improvements to a crucial internal production deployment tool in Golang, helping to eliminate incidents related to incorrect deployments, integrating metrics with Prometheus for monitoring, boosting test coverage, fixing bugs and implementing requested features.",
+				"desc":"Oversaw improvements to a crucial internal production deployment tool in Golang, interacting with hashistack and gitlab APIs, helping to eliminate incidents related to incorrect deployments, integrating metrics with Prometheus for monitoring, boosting test coverage, fixing bugs and implementing requested features.",
 				// "desc": "Oversaw the vital improvements of a mission-critical tool used for production deployments, enhancing its reliability, testability, and operational visibility. Key contributions included integrating Prometheus metrics for real-time monitoring, augmenting the tool's unit test coverage for better maintainability, and refining its operational robustness to ensure seamless execution. These enhancements, bug fixes and vulnerability corrections bolstered the system's security and operational efficiency, leading to a significant reduction in production incidents.",
 				"sortdate": "2022-06-01",
 				"tech": "Golang, Docker, Nomad, Prometheus, Grafana"
 			},
 			{
-				"desc":"Developed a custom Terraform provider, automating infrastructure provisioning and syncing with web APIs, facilitating the launch of key business segments.",
+				"desc":"Developed a custom Terraform provider to sync resources with a 3rd party accounting service via their http API, facilitating the launch of key business segments.",
 				// "desc": "Designed and implemented a custom Terraform provider to automate infrastructure provisioning and ensure synchronization with web service APIs. The project involved in-depth work with Terraform and Golang, leading to streamlined operations and enhanced efficiency.",
 				"sortdate": "2022-01-24",
 				"tech": "Terraform, Golang, APIs"

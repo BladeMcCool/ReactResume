@@ -22,6 +22,11 @@ html, body {
         'skills';
     margin: 1rem;
 
+    @media (min-width:768px) {
+        max-width: calc(768px - 2rem);
+        margin: 1rem auto;
+    }
+
     /* assign columns to grid areas */
     > .header {
         grid-area: header;
@@ -58,7 +63,7 @@ html, body {
 
 .work-experience {
     display:grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas:
         'company-jobtitle date-location'
         'entry entry';
