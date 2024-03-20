@@ -4,6 +4,7 @@ $colorbg: #ffffff;
 $fat: 3px solid $dark;
 $skinny: 1px solid $dark;
 $none: 0px solid $dark;
+$font-size: .87rem;
 
 html, body {
   overflow-x: hidden;
@@ -91,8 +92,8 @@ html, body {
 
 
 body { font-family: sans-serif; }
-p { margin: 0px; font-size: .85rem; }
+p { margin: 0px; font-size: $font-size }
 h3  { margin: 0px; font-size: 1rem; font-weight: normal; }
-h2  { margin: 0px; font-size: 1.3rem; border-bottom: $fat }
-ul { margin-bottom: .85rem; }
-li {  font-size: .85rem; }
+h2  { margin: 0px; font-size: 1.2rem; border-bottom: $fat }
+ul { margin-bottom: $font-size }
+li {  font-size: $font-size }
