@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-
+#
 #  build:
 #
 #    runs-on: ubuntu-latest
@@ -34,6 +34,7 @@ jobs:
 #          docker tag ghcr.io/blademccool/resume:${{ github.sha }} ghcr.io/blademccool/resume:${{ github.ref_name }}
 #          docker push ghcr.io/blademccool/resume:${{ github.ref_name }}
 
+# legacy methodology was to just trigger the pipeline and let it figure out the ref but as it was correctly pointed out to me, this methodology precludes reproducible builds. henceforth we will commit the ref of the resume to use right into the master branch of the website (see down below)
 #        # trigger pipeline in website repo
 #        # this requires a PAT, and it does not allow the classic style that allow no expiry.
 #        # WEBSITE_PIPELINE_PAT (believed to expire 2025-03-18) is a fine-grained one targeting the chws.ca repo which includes "Read and Write" for both Actions and Contents (it didnt work without Contents, havent verified if Actions is actually even needed)
@@ -50,9 +51,9 @@ jobs:
     if: github.event_name == 'push' # only after pushing directly or merging into master tho
 
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+#    permissions:
+#      contents: read
+#      packages: write
 
     steps:
       - name: Checkout repository
@@ -60,7 +61,7 @@ jobs:
         with:
           repository: BladeMcCool/chws.ca
           ref: 'master'
-          token:  ${{ secrets.WEBSITE_PIPELINE_PAT }}
+#          token:  ${{ secrets.WEBSITE_PIPELINE_PAT }}
 
       - name: Update Resume Ref in deps.env
         run: |
