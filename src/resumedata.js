@@ -110,7 +110,7 @@ export const resumeData = {
 		"sortdate":"2024-03-11",
 		"projects":[
 			{
-				"desc":"Oversaw improvements to a crucial internal production deployment tool in Go which interacts with Nomad and GiLab APIs, helping to completely eliminate incidents related to incorrect deployments, integrating metrics with Prometheus for monitoring, boosting test coverage, fixing bugs and implementing requested features.",
+				"desc":"Oversaw improvements to a crucial internal production deployment tool in Go which interacts with Nomad and GitLab APIs, helping to completely eliminate incidents related to incorrect deployments, integrating metrics with Prometheus for monitoring, boosting test coverage, fixing bugs and implementing requested features.",
 				// "desc": "Oversaw the vital improvements of a mission-critical tool used for production deployments, enhancing its reliability, testability, and operational visibility. Key contributions included integrating Prometheus metrics for real-time monitoring, augmenting the tool's unit test coverage for better maintainability, and refining its operational robustness to ensure seamless execution. These enhancements, bug fixes and vulnerability corrections bolstered the system's security and operational efficiency, leading to a significant reduction in production incidents.",
 				"sortdate": "2022-06-01",
 				"tech": "Go, Docker, Nomad, Prometheus, Grafana"
@@ -157,7 +157,7 @@ export const resumeData = {
 		"daterange": "Oct 2019 - Nov 2021",
 		"sortdate":"2021-08-15",
 		"projects":[{
-			"desc": "Developed an interactive SMS-based survey microservice for patient follow-up, utilizing Django/Python and integrating Twilio for efficient SMS communication, as a drop-in replacement for an expensive vendor product, realizing substantive operational cost savings.",
+			"desc": "Developed an interactive SMS-based survey microservice for patient follow-up, utilizing Django/Python and integrating Twilio for efficient SMS communication, as a drop-in replacement for a vendor product, realizing tens of thousands of dollars of monthly operational cost savings.",
 			"tech":"Django/Python, Twilio, Postgres, Kubernetes",
 		},
 		{
@@ -246,8 +246,8 @@ export const resumeData = {
 		"notes":["Graduated with honors"]
 	}],
 	"hobbies":[
-		"Learning japanese",
-		"property Development",
+		"Learning Japanese",
+		"property development",
 		"experimenting with AI tools such as diffusion and language models",
 		// "Vector Databases" //soon(tm)
 	],
@@ -255,7 +255,7 @@ export const resumeData = {
 		"Solving complex problems involving dynamic systems with many moving parts",
 		"self-learning, adapting to new tech across full-stack development",
 		"back-end development with Go, Python, Rust, Node.js",
-		"front-end web app development using React/JSX/HTML5, ES6/Javascript, REST, SCSS.", //prefer backend-only stuff though.
+		"front-end web app development using React/JSX/HTML5, ES6/Javascript, REST, SCSS", //prefer backend-only stuff though.
 		"data management with Postgres, MySQL, Redis, AMQP",
 		"proficient with Docker, JetBrains IDEs, CI systems",
 		"experienced with AWS, Kubernetes"
