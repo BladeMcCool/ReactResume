@@ -98,7 +98,7 @@ html, body {
 
 body { font-family: sans-serif; }
 p { margin: 0px; font-size: $font-size }
-h3  { margin: 0px; font-size: 1rem; font-weight: normal; }
-h2  { margin: 0px; font-size: 1.2rem; border-bottom: $fat }
+h3  { margin: 0px; font-size: $font-size; font-weight: normal; font-style: normal; }
+h2  { margin: 0px; font-size: $font-size; border-bottom: $fat; text-transform: uppercase; }
 ul { margin-bottom: $font-size }
 li {  font-size: $font-size }

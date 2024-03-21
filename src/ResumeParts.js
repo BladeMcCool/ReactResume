@@ -34,11 +34,11 @@ export class Education extends React.Component {
                 {vars.map((entry, index) =>
                     <div key={index} className="work-experience">
                         <div className="work-company-jobtitle">
-                            <p><b>{entry.institution}</b></p>
-                            <p>{entry.description}</p>
+                            <p>{entry.institution}</p>
+                            <p><b>{entry.description}</b></p>
                         </div>
                         <div className="work-date-location">
-                            <p><b>{entry.graduated}</b></p>
+                            <p>{entry.graduated}</p>
                             <p>{entry.location}</p>
                         </div>
                         {entry.notes.length > 0 && (
@@ -67,7 +67,7 @@ export class Skills extends React.Component {
                 <div className="skill-entries">
                     <ul>
                         <li key="skill">
-                            <b>Skills:</b> {skills.join(', ')}
+                            <b>Skills:</b> {skills.join('; ')}
                         </li>
                         <li key="interest">
                             <b>Interests:</b> {hobbies.join(', ')}
@@ -127,22 +127,22 @@ export class ExperienceV2 extends React.Component {
 
     render() {
         const work_history = this.work_history()
-
         return (
             <div className="main-content">
                 <h2>Work Experience</h2>
                 {work_history.map((company, index) =>
                     <div key={index} className="work-experience">
                         <div className="work-company-jobtitle">
-                            <h3><b>{company.company}</b> - {company.companydesc}</h3>
-                            <p><i>{company.jobtitle}</i></p>
+                            {/*<p><b>{company.company}</b> - {company.companydesc}</p>*/}
+                            <p><b>{company.company}</b></p>
+                            <h3><i>{company.jobtitle}</i></h3>
                         </div>
                         <div className="work-date-location">
-                            <p><b>{company.daterange}</b></p>
+                        <p><b>{company.daterange}</b></p>
                             <p>{company.location}</p>
                         </div>
                         <div className="work-entries">
-                            <ul>
+                        <ul>
                                 {company.projects.map((project, index) => {
                                     //todo try this with a filter().map() instead
                                     if (!project.hide) {
