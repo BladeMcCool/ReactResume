@@ -81,11 +81,27 @@ export class Skills extends React.Component {
 
 //i'm intending atm to keep this as a 1 pager.
 export class ExperienceV2 extends React.Component {
+
     work_history() {
+
+        let displayModifier = this.getDisplayModifier();
+        // console.log("displayModifier:", displayModifier)
+
         const work_history = this.props.work_history
         let entries = []
         for (var entry of work_history) {
-            if (entry.hide) {
+            let hideWholeEntry = entry.hide
+
+            //if there is mention of the company tag in the displayModifier with any 'true' entries, then we are being explicitly asked to show it, so do so.
+            if (displayModifier[entry.tag] !== undefined) {
+                for (const projectDisplayOverride of displayModifier[entry["tag"]]) {
+                    if (projectDisplayOverride) {
+                        hideWholeEntry = false
+                        break
+                    }
+                }
+            }
+            if (hideWholeEntry) {
                 continue
             }
 
@@ -97,10 +113,21 @@ export class ExperienceV2 extends React.Component {
             }
 
             let entry_has_visible_projects = false
-            for (var project of entry.projects) {
+            for (let i = 0; i < entry.projects.length; i++) {
+                const project = entry.projects[i]
+
+                //override show/hide if needed.
+                if (displayModifier[entry.tag] !== undefined) {
+                    //if the modifier list is long enough to possibly have a setting for this entry ...
+                        //i could have used dictionaries or something, but this was an exercise in list-fu.
+                    if (displayModifier[entry.tag].length >= i+1 && displayModifier[entry.tag][i] != null) {
+                        project.hide = !displayModifier[entry.tag][i] //use the true or false value that was provided for this section override to decide to hide it or not (true=show it, false=hide it)
+                        // console.log("override project.hide of ", entry.tag+"_"+i, "to be", project.hide)
+                    }
+                }
+
                 if (!project.hide) {
                     entry_has_visible_projects = true
-                    break
                 }
             }
 
@@ -125,8 +152,41 @@ export class ExperienceV2 extends React.Component {
         return entries
     }
 
+    //take some url params input in the form of show= and hide= with values like sectionTag_sectionNum1,sectionNum2 etc
+    //eg show=krk_0,1&hide=chws_4,5
+    //return an override dict with the section tags as keys
+    getDisplayModifier() {
+        function setShowingItems(show, tag_sections, overrides) {
+            for (const item of tag_sections) {
+                const [tag, numbers] = item.split('_');  // Split on underscore
+                const indices = numbers.split(',').map(Number);  // Split on comma and convert to integers
+                const maxIndex = Math.max(...indices);
+                if (!overrides[tag]) {
+                    // If the key doesn't exist in the result object, create a list of nulls
+                    overrides[tag] = Array(maxIndex + 1).fill(null);
+                } else if (overrides[tag].length < maxIndex + 1) {
+                    // Or if the list is too short, extend it with nulls
+                    const fillFrom = overrides[tag].length
+                    overrides[tag].length = maxIndex + 1;
+                    overrides[tag].fill(null, fillFrom);
+                }
+
+                for (const section_num of indices) {
+                    overrides[tag][section_num] = show
+                }
+            }
+        }
+
+        const searchParams = new URLSearchParams(window.location.search);
+        let overrides = {}
+        setShowingItems(true, searchParams.getAll('show'), overrides)
+        setShowingItems(false, searchParams.getAll('hide'), overrides)
+        return overrides
+    }
+
     render() {
         const work_history = this.work_history()
+
         return (
             <div className="main-content">
                 <h2>Work Experience</h2>

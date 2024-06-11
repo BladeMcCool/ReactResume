@@ -27,6 +27,7 @@ export const resumeData = {
 	],
 	"work_history"	: [{
 		"company":"CHWS",
+		"tag":"chws",
 		"companydesc":"Software Development Consultancy",
 		"location":"Lethbridge, AB",
 		"jobtitle":"Senior Software Developer",
@@ -101,6 +102,7 @@ export const resumeData = {
 		}]
 	},{
 		"company":"Kraken",
+		"tag":"krk",
 		"companydesc":"Digital Asset Exchange",
 		"location":"Remote",
 		"jobtitle":"Software Engineer II",
@@ -149,6 +151,7 @@ export const resumeData = {
 		]
 	},{
 		"company":"PerfectServe/Telmediq",
+		"tag":"tmq",
 		"companydesc":"Clinical Communication and Collaboration",
 		"location":"Victoria, BC",
 		"jobtitle":"Software Engineer",
@@ -170,6 +173,7 @@ export const resumeData = {
 		}]
 	},{
 		"company":"Go2mobi",
+		"tag":"go2",
 		"companydesc":"Mobile Advertising Self-Serve DSP",
 		"location":"Victoria, BC",
 		"jobtitle":"Senior Software Developer",
@@ -191,6 +195,7 @@ export const resumeData = {
 		}]
 	},{
 		"company":"Shrinking Planet Communications",
+		"tag":"spi",
 		"companydesc":"Content Management Systems and Web Application Development",
 		"location":"Toronto, ON",
 		"jobtitle":"Full Stack Developer",
@@ -201,6 +206,7 @@ export const resumeData = {
 		"hide":true,
 	},{
 		"company":"Glacier Digital",
+		"tag":"gdi",
 		"companydesc":"Enterprise Application Development and Content Management Systems",
 		"location":"Burlington, ON",
 		"jobtitle":"Senior Software Developer",
@@ -224,6 +230,7 @@ export const resumeData = {
 		}]
 	},{
 		"company":"SunLife Financial",
+		"tag":"sun",
 		"companydesc":"Enterprise Application Development and Content Management Systems",
 		"location":"Toronto, ON",
 		"jobtitle":"Intern - Internet Technologies Group",
