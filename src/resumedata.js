@@ -262,7 +262,7 @@ export const resumeData = {
 	],
 	"jobs":[{
 		"title":"Software Engineer II",
-		"tag":"seniorengii"
+		"tag":"engii"
 	},{
 		"title":"Senior Software Developer",
 		"tag":"seniordev"

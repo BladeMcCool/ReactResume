@@ -12,7 +12,7 @@ The current layout is heavily inspired by [this reddit post](https://www.reddit.
 # Printing notes
 The current layout is intended to be a single page. If it is overflowing then the best thing to do is make it fit on one page by adjusting the font size in the css for some of the elements that are used.
 
-Printing to PDF in modern Chrome seems to work well (2024)
+Printing to PDF in modern Chrome seems to work well (2024), although I believe the output is not text searchable.
 
 # React simple setup (done with node 21.6.2)
 
@@ -29,4 +29,18 @@ Run Webpack with a hot reloading dev server:
 
 ```
 $ npm start
+```
+
+## Testing
+
+Run the test suite in watch mode:
+
+```
+$ npm run test
+```
+
+Run the test suite once and quit:
+
+```
+$ npm run test-once
 ```
