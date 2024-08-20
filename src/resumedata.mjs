@@ -1,5 +1,5 @@
 // note: project was restructured 2024-03-15 and history of this file was not preserved in this branch. please see older master branch for detailed git blame/annotations.
-export const resumeData = {
+export const resumedata = {
 	"personal_info":{
 		"name":"Chris A. Hagglund",
 		"email":"chris@chws.ca",
@@ -239,6 +239,16 @@ export const resumeData = {
 		"desc":"Diagrammed portions of the network infrastructure in the SunLife network using Visio 2000. Performed routine server maintenance (log rotation, disk space checking) of a small set of Solaris servers with the assistance of custom made scripts. Wrote a perl script to catalog the various internal web-services that were available in the intranet and present the results in a web interface.",
 		"tech":"Perl, Oracle, Bash, Unix, Visio 2000",
 		"hide":true,
+	},{
+		"company":"Early Career",
+		"tag":"ancient-history",
+		"companydesc":"Shrinking Planet, SunLife Financial, Glacier Digital",
+		"location":"Toronto, ON",
+		"jobtitle":"Software Developer",
+		"daterange": "1999-2009",
+		"sortdate":"1999-01-01",
+		"desc":"Over a decade of experience with technologies like Perl, PHP, MySQL and VBScript in early web development, focusing on content management systems, invoicing systems, and Y2K-era tools. Challenges included improving server efficiency, migrating legacy code, and enhancing security to prevent SQL injection vulnerabilities.",
+		"tech":"Perl, Oracle, Bash, Unix, MySQL, Apache, Visio 2000, VBScript, HTML/Templating, CFM, PHP, Javascript, CSS",
 	}],
 	"education":[
 		"Humber College (Toronto, 3 year Computer Programmer/Analyst Diploma, May 2002)",
@@ -253,10 +263,11 @@ export const resumeData = {
 		"notes":["Graduated with honors"]
 	}],
 	"hobbies":[
-		"Learning Japanese",
-		"property development",
-		"experimenting with AI tools such as diffusion and language models",
+		// "Learning Japanese",
+		// "property development",
+		// "experimenting with AI tools such as diffusion and language models",
 		// "Vector Databases" //soon(tm)
+		// "Destroying/obviating the entire hiring and recruiting industry with a bit of code and ChatGPT.",
 	],
 	"skills":[
 		"Solving complex problems involving dynamic systems with many moving parts",

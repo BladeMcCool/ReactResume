@@ -61,17 +61,23 @@ export class Skills extends React.Component {
     render() {
         const skills = this.props.skills
         const hobbies = this.props.hobbies
+        const headerText = (hobbies.length == 0) ? "Skills" : (skills.length == 0) ? "Interests" : "Skills & Interests"
+        const showSubheadings = skills.length > 0 && hobbies.length > 0
         return (
             <div className="skills">
-                <h2>Skills & Interests</h2>
+                <h2>{headerText}</h2>
                 <div className="skill-entries">
                     <ul>
+                        {skills.length > 0 && (
                         <li key="skill">
-                            <b>Skills:</b> {skills.join('; ')}
+                            {showSubheadings && (<b>Skills:</b>)}{skills.join('; ')}
                         </li>
+                        )}
+                        {hobbies.length > 0 && (
                         <li key="interest">
-                            <b>Interests:</b> {hobbies.join(', ')}
+                            {showSubheadings && (<b>Interests:</b>)}{hobbies.join(', ')}
                         </li>
+                        )}
                     </ul>
                 </div>
             </div>

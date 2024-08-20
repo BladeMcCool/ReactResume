@@ -44,3 +44,8 @@ Run the test suite once and quit:
 ```
 $ npm run test-once
 ```
+
+## Formatting resumedata for other things:
+`node.exe scripts/formatResumeData.mjs > work_history.json`
+
+There is a script in the package.json defined as format-data, and you can run npm format-data, but being under npm the output has some npm stuff at the top so just redirecting that to json wont work well, use the node.exe command above for a clean output.

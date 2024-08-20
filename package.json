@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "test-once": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "format-data": "node scripts/formatResumeData.js"
+    "format-data": "node scripts/formatResumeData.mjs"
   },
   "eslintConfig": {
     "extends": [
