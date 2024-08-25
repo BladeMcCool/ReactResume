@@ -1,20 +1,32 @@
 import {ExperienceV2, Header, Contact, Education, Skills} from "./ResumeParts";
-import {resumedata as defaultResumedata} from "./resumedata.mjs";
+import {Functions, EmploymentHistory} from "./FunctionalResumeParts";
+import {
+    resumedata as defaultResumedata,
+    functionalResumeData as importedFunctionalResumeData,
+} from "./resumedata.mjs";
 import React, {useEffect, useState} from "react";
-// import fs from 'fs';
-// import path from 'path';
-
 
 function App() {
     const queryParams = new URLSearchParams(window.location.search);
     const mode = queryParams.get('mode');
+    const layout = queryParams.get('layout') || 'default';
     const resumeDataFile = queryParams.get('resumedata');
+    // const resumeDataFile = queryParams.get('resumedata');
 
     const [resumedata, setResumedata] = useState(defaultResumedata);
+    const [functionalResumedata, setFunctionalResumedata] = useState(importedFunctionalResumeData);
 
     useEffect(() => {
+        updateResumeDataForLayout(setResumedata, resumeDataFile)
+    }, [resumeDataFile]);
+    useEffect(() => {
+        updateResumeDataForLayout(setFunctionalResumedata, resumeDataFile)
+    }, [resumeDataFile]);
+
+    let updateResumeDataForLayout =  function(setResumeDataCb, resumeDataFile) {
         if (resumeDataFile) {
-            const fetchUrl = `http://localhost:3002/resumedata/${resumeDataFile}.json`
+            const baseURL = `${window.location.protocol}//${window.location.hostname}:3002`;
+            const fetchUrl = `${baseURL}/resumedata/${resumeDataFile}.json`
             console.log("Load resumedata from url: ", fetchUrl)
             fetch(fetchUrl)
                 .then(response => {
@@ -25,14 +37,15 @@ function App() {
                 })
                 .then(data => {
                     // console.log("here with data ...", data)
-                    setResumedata(data)
+                    setResumeDataCb(data)
                 })
                 .catch(error => {
                     console.error("Error loading resume data:", error);
-                    setResumedata(defaultResumedata);
+                    setResumeDataCb(defaultResumedata);
                 });
         }
-    }, [resumeDataFile]);
+    }
+
 
     //this sorta works, in the sense that it will render the json and show it in the browser, but
     // its not really good enough for what i want because i need a dumb http client to be able to pull it down
@@ -51,16 +64,28 @@ function App() {
         return null;  // Prevent React from rendering anything else
     }
 
+    if (layout === 'functional') {
+        console.log("think about rendering this data", functionalResumedata.functional_areas)
+        return (
+            <div className="left-sidebar-grid">
+                <Header personal_info={functionalResumedata.personal_info}/>
+                <Contact personal_info={functionalResumedata.personal_info}/>
+                <Functions functional_areas={functionalResumedata.functional_areas}/>
+                {/*<EmploymentHistory functions={functionalResumedata.employment_history}/>*/}
+            </div>
+        )
+    } else {
+        return (
+            <div className="left-sidebar-grid">
+                <Header personal_info={resumedata.personal_info}/>
+                <Contact personal_info={resumedata.personal_info}/>
+                <ExperienceV2 work_history={resumedata.work_history}/>
+                <Education education={resumedata.education_v2}/>
+                <Skills hobbies={resumedata.hobbies} skills={resumedata.skills}/>
+            </div>
+        )
+    }
 
-    return (
-        <div className="left-sidebar-grid">
-            <Header personal_info={resumedata.personal_info}/>
-            <Contact personal_info={resumedata.personal_info}/>
-            <ExperienceV2 work_history={resumedata.work_history}/>
-            <Education education={resumedata.education_v2}/>
-            <Skills hobbies={resumedata.hobbies} skills={resumedata.skills}/>
-        </div>
-    )
 }
 
 export default App;

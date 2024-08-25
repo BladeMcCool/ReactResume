@@ -59,10 +59,13 @@ export class Education extends React.Component {
 
 export class Skills extends React.Component {
     render() {
-        const skills = this.props.skills
+        const skills = this.props.skills || []
         const hobbies = this.props.hobbies || []
-        const headerText = (hobbies.length == 0) ? "Skills" : (skills.length == 0) ? "Interests" : "Skills & Interests"
+        const headerText = (hobbies.length === 0) ? "Skills" : (skills.length === 0) ? "Interests" : "Skills & Interests"
         const showSubheadings = skills.length > 0 && hobbies.length > 0
+        if (skills.length === 0 && hobbies.length === 0) {
+            return null;  // Return null to render nothing
+        }
         return (
             <div className="skills">
                 <h2>{headerText}</h2>

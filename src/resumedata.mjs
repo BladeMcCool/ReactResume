@@ -1,14 +1,34 @@
 // note: project was restructured 2024-03-15 and history of this file was not preserved in this branch. please see older master branch for detailed git blame/annotations.
+const personal_info = {
+	"name":"Chris A. Hagglund",
+	"email":"chris@chws.ca",
+	"phone":"250-532-9694",
+	"linkedin":"linkedin.com/in/1337-chris-hagglund",
+	"location":"Lethbridge\u00A0AB", //\u00A0 is a non breaking space. putting &nbsp; in there didnt work, react just renders it literally.
+	"profile":"Software Engineer",
+	"github":"https://github.com/BladeMcCool",
+}
+
+const skills = [
+	"Solving complex problems involving dynamic systems with many moving parts",
+	"self-learning, adapting to new tech across full-stack development",
+	"back-end development with Go, Python, Rust, Node.js",
+	"front-end web app development using React/JSX/HTML5, ES6/Javascript, REST, SCSS", //prefer backend-only stuff though.
+	"data management with Postgres, MySQL, Redis, AMQP",
+	"proficient with Docker, JetBrains IDEs, CI systems",
+	"experienced with AWS, Kubernetes"
+]
+
+const education = [{
+	"institution":"Humber College",
+	"location":"Toronto, ON",
+	"description":"3 year Computer Programmer/Analyst Diploma",
+	"graduated":"May 2002",
+	"notes":["Graduated with honors"]
+}]
+
 export const resumedata = {
-	"personal_info":{
-		"name":"Chris A. Hagglund",
-		"email":"chris@chws.ca",
-		"phone":"250-532-9694",
-		"linkedin":"linkedin.com/in/1337-chris-hagglund",
-		"location":"Lethbridge\u00A0AB", //\u00A0 is a non breaking space. putting &nbsp; in there didnt work, react just renders it literally.
-		"profile":"Software Engineer",
-		"github":"https://github.com/BladeMcCool",
-	},
+	"personal_info":personal_info,
 
 	//ideas for future revision:
 	//deprecate this whole layout and content.
@@ -18,13 +38,15 @@ export const resumedata = {
 	//mention specifically that we're good at diving into complex problem and prefer to work with a good level of autonomy on goal oriented projects.
 	//only talk about things done in the last 3 years, and go into enough detail to fill out a full single page. focus on impact
 
-	"key_skills":[
-		"Analysing and solving problems; Proficient in self-directed learning; Adaptable to new languages, tools and frameworks; Experienced in both back-end and front-end development environments",
-		"Developing backend solutions, integrations and microservices; With Go, Python, Rust and Node.js",
-		"Building and supporting web apps; With HTML5, Javascript/ES6, React, REST, SCSS",
-		"Handling data; With Postgres, MySQL, Redis, AMQP and others", //lets play with a vector db then put it on the list whee
-		"Working with a variety of tools; Experienced with Docker, LLMs, AWS, Kubernetes, JetBrains IDEs, CI systems and more",
-	],
+	// wasnt using this so keeping it out of here (and the resulting json the json server in scripts dir will produce)
+	// "key_skills":[
+	// 	"Analysing and solving problems; Proficient in self-directed learning; Adaptable to new languages, tools and frameworks; Experienced in both back-end and front-end development environments",
+	// 	"Developing backend solutions, integrations and microservices; With Go, Python, Rust and Node.js",
+	// 	"Building and supporting web apps; With HTML5, Javascript/ES6, React, REST, SCSS",
+	// 	"Handling data; With Postgres, MySQL, Redis, AMQP and others", //lets play with a vector db then put it on the list whee
+	// 	"Working with a variety of tools; Experienced with Docker, LLMs, AWS, Kubernetes, JetBrains IDEs, CI systems and more",
+	// ],
+	"skills": skills,
 	"work_history"	: [{
 		"company":"CHWS",
 		"tag":"chws",
@@ -250,33 +272,18 @@ export const resumedata = {
 		"desc":"Over a decade of experience with technologies like Perl, PHP, MySQL and VBScript in early web development, focusing on content management systems, invoicing systems, and Y2K-era tools. Challenges included improving server efficiency, migrating legacy code, and enhancing security to prevent SQL injection vulnerabilities.",
 		"tech":"Perl, Oracle, Bash, Unix, MySQL, Apache, Visio 2000, VBScript, HTML/Templating, CFM, PHP, Javascript, CSS",
 	}],
-	"education":[
-		"Humber College (Toronto, 3 year Computer Programmer/Analyst Diploma, May 2002)",
-		"CompTIA A+ (Computer Service Technician Certification, Toronto, 2000)",
-		"White Oaks Secondary School (Oakville, OSSD, June 1999)",
-	],
-	"education_v2":[{
-		"institution":"Humber College",
-		"location":"Toronto, ON",
-		"description":"3 year Computer Programmer/Analyst Diploma",
-		"graduated":"May 2002",
-		"notes":["Graduated with honors"]
-	}],
+	// "education":[
+	// 	"Humber College (Toronto, 3 year Computer Programmer/Analyst Diploma, May 2002)",
+	// 	"CompTIA A+ (Computer Service Technician Certification, Toronto, 2000)",
+	// 	"White Oaks Secondary School (Oakville, OSSD, June 1999)",
+	// ],
+	"education_v2":education,
 	"hobbies":[
 		// "Learning Japanese",
 		// "property development",
 		// "experimenting with AI tools such as diffusion and language models",
 		// "Vector Databases" //soon(tm)
 		// "Destroying/obviating the entire hiring and recruiting industry with a bit of code and ChatGPT.",
-	],
-	"skills":[
-		"Solving complex problems involving dynamic systems with many moving parts",
-		"self-learning, adapting to new tech across full-stack development",
-		"back-end development with Go, Python, Rust, Node.js",
-		"front-end web app development using React/JSX/HTML5, ES6/Javascript, REST, SCSS", //prefer backend-only stuff though.
-		"data management with Postgres, MySQL, Redis, AMQP",
-		"proficient with Docker, JetBrains IDEs, CI systems",
-		"experienced with AWS, Kubernetes"
 	],
 	"jobs":[{
 		"title":"Software Engineer II",
@@ -294,4 +301,130 @@ export const resumedata = {
 		"title":"Customer Service",
 		"tag":"service"
 	}],
+}
+
+export const functionalResumeData = {
+	"personal_info":personal_info,
+	"education":education,
+	// "key_skills":skills,
+	"overview": "A dedicated and innovative Software Engineer with extensive experience in full-stack development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects and driving organizational success.",
+	"functional_areas":[
+		{
+			"title": "Technical Leadership & Innovation",
+			"examples": [
+				{
+					"headline": "Led improvements",
+					"body": "to mission-critical internal production deployment tools at Kraken, enhancing system reliability, boosting test coverage, and integrating Prometheus metrics for monitoring. These efforts eliminated incidents related to incorrect deployments.",
+					"tech": ["Go", "Docker", "Nomad", "Prometheus", "Grafana"]
+				},
+				{
+					"headline": "Developed a custom Terraform provider",
+					"body": "to sync resources with third-party web service APIs, facilitating key business segment launches.",
+					"tech": ["Terraform", "Go", "APIs"]
+				},
+				{
+					"headline": "Unified isolated testing frameworks",
+					"body": "across multiple repositories at Kraken, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
+					"tech": ["Bash scripting", "Docker", "CI pipelines"]
+				}
+			]
+		},
+		{
+			"title": "Problem Solving & Strategic Execution",
+			"examples": [
+				{
+					"headline": "Engineered a robust SMS-based survey microservice",
+					"body": "for patient follow-up at PerfectServe, saving the company tens of thousands of dollars monthly by replacing a vendor product.",
+					"tech": ["Django/Python", "Twilio", "Postgres", "Kubernetes"]
+				},
+				{
+					"headline": "Built and maintained a mobile advertising Real-Time Bidder",
+					"body": "at Go2mobi, handling 500,000 queries per second, significantly enhancing system performance and scalability.",
+					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"]
+				},
+				{
+					"headline": "Re-architected a click tracking system",
+					"body": "for better performance at Go2mobi, leading to improved click-through rates (CTR) and overall system efficiency.",
+					"tech": ["Python", "AWS"]
+				}
+			]
+		},
+		{
+			"title": "Full-Stack Development & Deployment",
+			"examples": [
+				{
+					"headline": "Developed and deployed various open-source projects",
+					"body": "including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
+					"tech": ["Go", "Docker", "Nginx", "Git", "Python", "JavaScript", "Node.js", "ES6", "Perl", "HTML5", "React", "MySQL", "Redis", "IPFS", "LND", "Bitcoind"]
+				},
+				{
+					"headline": "Created and maintained a Real-Time Bidding system",
+					"body": "for mobile advertising at Go2mobi, transitioning from Python to Go, ensuring system stability across a cluster of 15 servers.",
+					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"]
+				}
+			]
+		},
+		{
+			"title": "Team Leadership & Collaboration",
+			"examples": [
+				{
+					"headline": "Managed and led the development of various microservices",
+					"body": "at PerfectServe, integrating third-party scheduling systems, and enhancing existing microservices across the organization.",
+					"tech": ["Django/Python", "Go", "Kubernetes", "Spinnaker", "Postgres", "Redis", "Nginx"]
+				},
+				{
+					"headline": "Oversaw cross-functional team efforts",
+					"body": "at Kraken, standardizing testing tools across multiple teams and ensuring consistent application of best practices.",
+					"tech": ["Bash scripting", "Docker", "GitLabCI", "Terraform"]
+				}
+			]
+		},
+		{
+			"title": "Project Management & Execution",
+			"examples": [
+				{
+					"headline": "Executed and delivered multiple high-impact software projects",
+					"body": "such as the integration of Gmail API with Rust for automated email testing at Kraken, enabling new capabilities for several teams.",
+					"tech": ["Gmail API", "Rust", "GitLabCI"]
+				},
+				{
+					"headline": "Directed the successful re-architecture of key infrastructure",
+					"body": "such as the click tracking system at Go2mobi, improving system performance and ensuring robust, scalable operations.",
+					"tech": ["Python", "AWS"]
+				}
+			]
+		}
+	],
+	"employment_history": [
+		{
+			"title": "Senior Software Developer",
+			"company": "CHWS",
+			"location": "Lethbridge, AB",
+			"daterange": "2010 - Present"
+		},
+		{
+			"title": "Software Engineer II",
+			"company": "Kraken",
+			"location": "Remote",
+			"daterange": "Jan 2022 - Mar 2024"
+		},
+		{
+			"title": "Software Engineer",
+			"company": "PerfectServe/Telmediq",
+			"location": "Victoria, BC",
+			"daterange": "Oct 2019 - Nov 2021"
+		},
+		{
+			"title": "Senior Software Developer",
+			"company": "Go2mobi",
+			"location": "Victoria, BC",
+			"daterange": "Nov 2012 - Feb 2017"
+		},
+		{
+			"title": "Full Stack Developer",
+			"company": "Shrinking Planet Communications",
+			"location": "Toronto, ON",
+			"daterange": "2002 - 2009"
+		}
+	]
 }

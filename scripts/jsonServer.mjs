@@ -7,11 +7,23 @@ import cors from "cors";
 
 const app = express();
 
-// app.use(cors()); //<-- wide open
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://host.docker.internal:3000'
+];
+
 app.use(cors({
-    origin: 'http://localhost:3000',
-    methods: 'GET,POST',
-    allowedHeaders: 'Content-Type'
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
 }));
 
 // Disable ETag and Last-Modified
