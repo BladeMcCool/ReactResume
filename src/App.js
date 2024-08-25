@@ -1,5 +1,5 @@
 import {ExperienceV2, Header, Contact, Education, Skills} from "./ResumeParts";
-import {Functions, EmploymentHistory} from "./FunctionalResumeParts";
+import {Overview, Functions, Emploooyment, Edooocation} from "./FunctionalResumeParts";
 import {
     resumedata as defaultResumedata,
     functionalResumeData as importedFunctionalResumeData,
@@ -11,7 +11,6 @@ function App() {
     const mode = queryParams.get('mode');
     const layout = queryParams.get('layout') || 'default';
     const resumeDataFile = queryParams.get('resumedata');
-    // const resumeDataFile = queryParams.get('resumedata');
 
     const [resumedata, setResumedata] = useState(defaultResumedata);
     const [functionalResumedata, setFunctionalResumedata] = useState(importedFunctionalResumeData);
@@ -67,11 +66,13 @@ function App() {
     if (layout === 'functional') {
         console.log("think about rendering this data", functionalResumedata.functional_areas)
         return (
-            <div className="left-sidebar-grid">
+            <div className="left-sidebar-grid functional">
                 <Header personal_info={functionalResumedata.personal_info}/>
                 <Contact personal_info={functionalResumedata.personal_info}/>
+                <Overview overview={functionalResumedata.overview}/>
                 <Functions functional_areas={functionalResumedata.functional_areas}/>
-                {/*<EmploymentHistory functions={functionalResumedata.employment_history}/>*/}
+                <Emploooyment employment_history={functionalResumedata.employment_history}/>
+                <Edooocation education={functionalResumedata.education}/>
             </div>
         )
     } else {

@@ -96,12 +96,22 @@ html, body {
     }
 }
 
-.functionalExampleHeadline { font-weight: bold }
-.functionalExamples {}
-
 body { font-family: sans-serif; }
 p { margin: 0px; font-size: $font-size }
 h3  { margin: 0px; font-size: $font-size; font-weight: normal; font-style: normal; }
 h2  { margin: 0px; font-size: $font-size; border-bottom: $fat; text-transform: uppercase; }
 ul { margin-bottom: $gap-size }
 li {  font-size: $font-size; }
+
+.functionalExampleHeadline { font-weight: bold }
+ul.functionalExamples {
+  margin-top: 0rem;
+}
+
+.functionalExampleTech { font-style: italic; }
+.functionalOverview { margin-top: $gap-size; margin-bottom: $gap-size }
+.functionalEducation h2 {
+    margin-top: $gap-size
+}
+.functional h2 { border-bottom: 0px; font-weight: normal; text-transform: none }
+.functional .header h2 { text-transform: uppercase; font-weight: bold; }

@@ -307,7 +307,7 @@ export const functionalResumeData = {
 	"personal_info":personal_info,
 	"education":education,
 	// "key_skills":skills,
-	"overview": "A dedicated and innovative Software Engineer with extensive experience in full-stack development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects and driving organizational success.",
+	"overview": "A tenacious and innovative Software Engineer with extensive experience in back-end development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects and driving organizational success.",
 	"functional_areas":[
 		{
 			"title": "Technical Leadership & Innovation",
@@ -315,17 +315,20 @@ export const functionalResumeData = {
 				{
 					"headline": "Led improvements",
 					"body": "to mission-critical internal production deployment tools at Kraken, enhancing system reliability, boosting test coverage, and integrating Prometheus metrics for monitoring. These efforts eliminated incidents related to incorrect deployments.",
-					"tech": ["Go", "Docker", "Nomad", "Prometheus", "Grafana"]
+					"tech": ["Go", "Docker", "Nomad", "Prometheus", "Grafana"],
+					"daterange":"2022"
 				},
 				{
 					"headline": "Developed a custom Terraform provider",
 					"body": "to sync resources with third-party web service APIs, facilitating key business segment launches.",
-					"tech": ["Terraform", "Go", "APIs"]
+					"tech": ["Terraform", "Go", "APIs"],
+					"daterange":"2022"
 				},
 				{
 					"headline": "Unified isolated testing frameworks",
 					"body": "across multiple repositories at Kraken, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
-					"tech": ["Bash scripting", "Docker", "CI pipelines"]
+					"tech": ["Bash scripting", "Docker", "CI pipelines"],
+					"daterange":"2023"
 				}
 			]
 		},
@@ -335,47 +338,56 @@ export const functionalResumeData = {
 				{
 					"headline": "Engineered a robust SMS-based survey microservice",
 					"body": "for patient follow-up at PerfectServe, saving the company tens of thousands of dollars monthly by replacing a vendor product.",
-					"tech": ["Django/Python", "Twilio", "Postgres", "Kubernetes"]
+					"tech": ["Django/Python", "Twilio", "Postgres", "Kubernetes"],
+					"daterange":"2019"
 				},
 				{
 					"headline": "Built and maintained a mobile advertising Real-Time Bidder",
 					"body": "at Go2mobi, handling 500,000 queries per second, significantly enhancing system performance and scalability.",
-					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"]
+					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
+					"daterange":"2012-2017",
 				},
 				{
 					"headline": "Re-architected a click tracking system",
 					"body": "for better performance at Go2mobi, leading to improved click-through rates (CTR) and overall system efficiency.",
-					"tech": ["Python", "AWS"]
+					"tech": ["Python", "AWS"],
+					"daterange":"2013"
 				}
 			]
 		},
 		{
-			"title": "Full-Stack Development & Deployment",
+			"title": "Back-end Development & Deployment",
 			"examples": [
 				{
 					"headline": "Developed and deployed various open-source projects",
 					"body": "including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
-					"tech": ["Go", "Docker", "Nginx", "Git", "Python", "JavaScript", "Node.js", "ES6", "Perl", "HTML5", "React", "MySQL", "Redis", "IPFS", "LND", "Bitcoind"]
+					"tech": ["Go", "Docker", "Nginx", "Git", "Python", "JavaScript", "Node.js", "ES6", "Perl", "HTML5", "React", "MySQL", "Redis", "IPFS", "LND", "Bitcoind"],
+					"daterange":"2010-Present"
 				},
+				//kind of duplication a bit here huh.
 				{
 					"headline": "Created and maintained a Real-Time Bidding system",
 					"body": "for mobile advertising at Go2mobi, transitioning from Python to Go, ensuring system stability across a cluster of 15 servers.",
-					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"]
+					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
+					"daterange":"2012-2017",
 				}
 			]
 		},
 		{
+			"hide":"True",
 			"title": "Team Leadership & Collaboration",
 			"examples": [
 				{
 					"headline": "Managed and led the development of various microservices",
 					"body": "at PerfectServe, integrating third-party scheduling systems, and enhancing existing microservices across the organization.",
-					"tech": ["Django/Python", "Go", "Kubernetes", "Spinnaker", "Postgres", "Redis", "Nginx"]
+					"tech": ["Django/Python", "Go", "Kubernetes", "Spinnaker", "Postgres", "Redis", "Nginx"],
+					"daterange":"2020",
 				},
 				{
 					"headline": "Oversaw cross-functional team efforts",
 					"body": "at Kraken, standardizing testing tools across multiple teams and ensuring consistent application of best practices.",
-					"tech": ["Bash scripting", "Docker", "GitLabCI", "Terraform"]
+					"tech": ["Bash scripting", "Docker", "GitLabCI", "Terraform"],
+					"daterange":"2022-2024",
 				}
 			]
 		},
@@ -385,12 +397,14 @@ export const functionalResumeData = {
 				{
 					"headline": "Executed and delivered multiple high-impact software projects",
 					"body": "such as the integration of Gmail API with Rust for automated email testing at Kraken, enabling new capabilities for several teams.",
-					"tech": ["Gmail API", "Rust", "GitLabCI"]
+					"tech": ["Gmail API", "Rust", "GitLabCI"],
+					"daterange":"2023",
 				},
 				{
 					"headline": "Directed the successful re-architecture of key infrastructure",
 					"body": "such as the click tracking system at Go2mobi, improving system performance and ensuring robust, scalable operations.",
-					"tech": ["Python", "AWS"]
+					"tech": ["Python", "AWS"],
+					"daterange":"2013-2017",
 				}
 			]
 		}

@@ -1,6 +1,6 @@
 import express from 'express';
 //if we want to update this as it changes, we should probably use nodemon to hot-reload the server.
-import {resumedata} from "../src/resumedata.mjs";
+import {resumedata, functionalResumeData} from "../src/resumedata.mjs";
 import { fileURLToPath } from 'url';
 import path from "path";
 import cors from "cors";
@@ -46,22 +46,6 @@ app.get('/', async (req, res) => {
 });
 
 app.use('/resumedata', express.static(path.join(path.dirname(fileURLToPath(import.meta.url)), '../resumedata')));
-// if the above is not robust enough ...
-// app.get('/resumedata', (req, res) => {
-//     const resumeFile = req.query.file; // e.g., ?file=resume1
-//     if (!resumeFile) {
-//         return res.status(400).send('File query parameter is required');
-//     }
-//
-//     const filePath = path.join(__dirname, 'resumedata', `${resumeFile}.json`);
-//
-//     res.sendFile(filePath, err => {
-//         if (err) {
-//             console.error("File not found:", err);
-//             res.status(404).send('File not found');
-//         }
-//     });
-// });
 
 const PORT = process.env.JSON_SERVER_PORT || 3002;
 app.listen(PORT, () => {
