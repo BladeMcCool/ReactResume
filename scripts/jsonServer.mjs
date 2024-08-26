@@ -38,7 +38,24 @@ app.get('/', async (req, res) => {
         res.setHeader('Pragma', 'no-cache');
         res.setHeader('Expires', '0');
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(resumedata);
+
+        // Retrieve the 'layout' query parameter
+        const layout = req.query.layout || 'default';
+
+        // Default data to send
+        let dataToSend = resumedata;
+
+        // Check the value of 'layout' and adjust the response accordingly
+        // Send the appropriate JSON response
+        if (layout === 'functional') {
+            dataToSend = functionalResumeData; // Assume functionalData is the alternative JSON data
+        } else if (layout === 'default') {
+            // If the layout is provided but is not recognized, return a 500 error
+        } else {
+            return res.status(500).send('Invalid layout parameter');
+        }
+
+        res.status(200).json(dataToSend);
     } catch (error) {
         console.error('Error loading resumedata.mjs:', error);
         res.status(500).send('Error loading data');

@@ -374,7 +374,7 @@ export const functionalResumeData = {
 			]
 		},
 		{
-			"hide":"True",
+			"hide":true,
 			"title": "Team Leadership & Collaboration",
 			"examples": [
 				{
@@ -411,12 +411,6 @@ export const functionalResumeData = {
 	],
 	"employment_history": [
 		{
-			"title": "Senior Software Developer",
-			"company": "CHWS",
-			"location": "Lethbridge, AB",
-			"daterange": "2010 - Present"
-		},
-		{
 			"title": "Software Engineer II",
 			"company": "Kraken",
 			"location": "Remote",
@@ -439,6 +433,12 @@ export const functionalResumeData = {
 			"company": "Shrinking Planet Communications",
 			"location": "Toronto, ON",
 			"daterange": "2002 - 2009"
-		}
+		},
+		{
+			"title": "Senior Software Developer",
+			"company": "CHWS",
+			"location": "Lethbridge, AB",
+			"daterange": "2010 - Present"
+		},
 	]
 }

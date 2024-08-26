@@ -23,9 +23,7 @@ export class Functions extends React.Component {
                                 if (example.hide) { return null }
                                 return (
                                     <li key={index}>
-                                        <p><span
-                                            className={"functionalExampleHeadline"}>{example.headline}</span>&nbsp;{example.body}&nbsp;({example.daterange})
-                                        </p>
+                                        <span className={"functionalExampleHeadline"}>{example.headline}</span>&nbsp;{example.body}&nbsp;({example.daterange})
                                         <p><span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span></p>
                                     </li>
                                 )

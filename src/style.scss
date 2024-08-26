@@ -105,7 +105,9 @@ li {  font-size: $font-size; }
 
 .functionalExampleHeadline { font-weight: bold }
 ul.functionalExamples {
-  margin-top: 0rem;
+    margin-top: 0rem;
+//     padding-left: 1.1rem;
+//     list-style-position: inside;
 }
 
 .functionalExampleTech { font-style: italic; }
