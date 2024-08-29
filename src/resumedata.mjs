@@ -314,21 +314,24 @@ export const functionalResumeData = {
 			"key_contributions": [
 				{
 					"lead_in": "Implemented improvements",
-					"continuation": "to mission-critical internal production deployment tooling at Kraken, enhancing system reliability, boosting test coverage, and integrating metrics for monitoring. These efforts eliminated production incidents related to incorrect deployments.",
+					"continuation": "to mission-critical internal production deployment tooling, enhancing system reliability, boosting test coverage, and integrating metrics for monitoring. These efforts eliminated production incidents related to incorrect deployments.",
 					"tech": ["Go", "Docker", "Nomad", "Prometheus", "Grafana"],
-					"daterange":"2022"
+					"daterange":"2022",
+					"company": "Kraken"
 				},
 				{
 					"lead_in": "Created and maintained a Real-Time Bidding system",
-					"continuation": "for mobile advertising at Go2mobi in Python, later transitioning to Go, ensuring system stability and handling 500,000 queries per second, across a cluster of 15 servers",
+					"continuation": "for mobile advertising in Python, later transitioning to Go, ensuring system stability and handling 500,000 queries per second, across a cluster of 15 servers",
 					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
 					"daterange":"2012-2017",
+					"company": "Go2Mobi"
 				},
 				{
 					"lead_in": "Engineered a robust SMS-based survey",
-					"continuation": "microservice for patient follow-up at PerfectServe, integrating Twilio for efficient patient follow-up SMS communication, as a drop-in replacement for a vendor product and realizing tens of thousands of dollars of monthly operational cost savings.",
+					"continuation": "microservice for patient follow-up, integrating Twilio for efficient patient follow-up SMS communication, as a drop-in replacement for a vendor product and realizing tens of thousands of dollars of monthly operational cost savings.",
 					"tech": ["Django/Python", "Twilio", "Postgres", "Kubernetes"],
-					"daterange":"2019"
+					"daterange":"2019",
+					"company":"PerfectServe"
 				},
 				{
 					"lead_in": "Re-architected existing click tracking system",
@@ -342,10 +345,11 @@ export const functionalResumeData = {
 					"continuation": "including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
 					"tech": ["Go", "Docker", "Nginx", "Git", "Python", "JavaScript", "Node.js", "ES6", "Perl", "HTML5", "React", "MySQL", "Redis", "IPFS", "LND", "Bitcoind"],
 					"daterange":"2010-Present",
+					"company":"CHWS",
 					"hide": true,
 				},
 				{
-					"lead_in": "Maintained and optimized content management systems (CMS) at Shrinking Planet Communications",
+					"lead_in": "Maintained and optimized content management systems (CMS)",
 					"continuation": "for hundreds of clients, enhancing existing CMS, CRM and email broadcast systems to improve performance and scalability. This role involved significant back-end development, including building a custom SQL abstraction ORM and integrating payment processing with Moneris.",
 					"tech": [
 						"Perl",
@@ -355,6 +359,7 @@ export const functionalResumeData = {
 						"Moneris"
 					],
 					"daterange": "2002-2009",
+					"company": "Shrinking Planet",
 					"hide":true
 				},
 				{
@@ -368,6 +373,7 @@ export const functionalResumeData = {
 						"Moneris"
 					],
 					"daterange": "2002-2009",
+					"company": "Shrinking Planet",
 					"hide":true
 				}
 			]
@@ -378,27 +384,31 @@ export const functionalResumeData = {
 				//maybe mention something about cypress stuff at tmq
 				{
 					"lead_in": "Developed and tested a Terraform provider",
-					"continuation": "for syncing with a third-party accounting API at Kraken, enabling seamless interaction with the vendor's REST API, enabling the potential launch of a key business segment.",
+					"continuation": "for syncing with a third-party accounting API, enabling seamless interaction with the vendor's REST API, enabling the potential launch of a key business segment.",
 					"tech": ["Go", "Terraform", "REST APIs", "IaC"],
-					"daterange":"2022"
+					"daterange":"2022",
+					"company": "Kraken",
 				},
 				{
 					"lead_in": "Unified isolated testing frameworks",
-					"continuation": "across a multitude repositories at Kraken, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
+					"continuation": "across a multitude Gitlab repositories, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
 					"tech": ["Bash scripting", "Docker", "GitLabCI", "CI/CD"],
-					"daterange":"2023"
+					"daterange":"2023",
+					"company": "Kraken",
 				},
 				{
 					"lead_in": "Enabled new testing capabilities",
-					"continuation": "for several teams at Kraken by integrating Gmail API capability within their Rust based end-to-end testing framework.",
+					"continuation": "for several teams by integrating Gmail API capability within their Rust based end-to-end testing framework.",
 					"tech": ["Gmail API", "Rust", "GitLabCI"],
 					"daterange":"2023",
+					"company": "Kraken",
 				},
 				{
 					"lead_in": "Improved test coverage",
 					"continuation": "across various subsystems of the Real Time Bidder at Go2Mobi",
 					"tech": ["Python", "Go"],
 					"daterange":"2014-2016",
+					"company": "Shrinking Planet",
 					"hide":true,
 				},
 
@@ -406,12 +416,13 @@ export const functionalResumeData = {
 		},
 		{
 			"title": "Experimentation & Documentation",
-			//tweet harvesting
-			//IPFS messing around
-			//stable diffusion stuff
-			//openai api
-			//ln donations stuff
-			//react cv -> resume tuner stuff
+			//more ideas for this section (if we were going to show it, heh)
+				//tweet harvesting
+				//IPFS messing around
+				//stable diffusion stuff
+				//openai api
+				//ln donations stuff
+				//react cv -> resume tuner stuff
 			"key_contributions": [
 				{
 					"lead_in": "Enhanced SEO automation systems",
@@ -423,6 +434,7 @@ export const functionalResumeData = {
 						"CAPTCHA bypass services"
 					],
 					"daterange": "2010-2012",
+					"company": "CHWS",
 					"hide":true
 				},
 				{
@@ -436,6 +448,7 @@ export const functionalResumeData = {
 						"Solaris",
 						"Visio 2000"
 					],
+					"company": "SunLife Financial",
 					"daterange": "2001",
 					"hide":true
 				},
@@ -448,32 +461,34 @@ export const functionalResumeData = {
 						"Bitcoind"
 					],
 					"daterange": "2010",
+					"company": "CHWS",
 					"hide":true
 				}
 			]
 		},
 
 		{
-			// "hide":true,
 			"title": "Collaborative Problem Solving & Execution",
 			"key_contributions": [
 				//could talk about that time i had to wrangle way too many people to get the traceparent header shit sorted out.
 				{
 					"lead_in": "Engineered robust integrations",
-					"continuation": "with third-party scheduling system APIs at PerfectServe, working with stakeholders to document and understand hidden requirements",
+					"continuation": "with third-party scheduling system APIs, working with stakeholders to document and understand hidden requirements",
 					"tech": ["Python", "APIs"],
+					"company": "PerfectServe",
 					"daterange":"2020",
 				},
 				{
 					"lead_in": "Contributed to the enhancement",
 					"continuation": "and maintenance of various microservices across the organization in TypeScript, Python and Go, implementing REST endpoints to serve user interface components, improving service logs, and adjusting user interface elements.",
 					"tech": ["TypeScript", "Python", "Go", "React"],
+					"company": "PerfectServe",
 					"daterange":"2020",
 				},
 
 				{
 					"lead_in": "Managed large-scale ETL processes for mobile advertising data",
-					"continuation": "at Go2mobi, working with the team to develop Extract, Transform, Load operations to handle hundreds of millions of records daily from a Real Time Bidding system. This involved optimizing data flow and reporting processes to ensure accurate and timely data for decision-making.",
+					"continuation": ", working with the team to develop Extract, Transform, Load operations to handle hundreds of millions of records daily from a Real Time Bidding system. This involved optimizing data flow and reporting processes to ensure accurate and timely data for decision-making.",
 					"tech": [
 						"Python",
 						"RabbitMQ",
@@ -481,7 +496,7 @@ export const functionalResumeData = {
 						"Redshift"
 					],
 					"daterange": "2013-2017",
-					// "hide":true
+					"company":"Go2mobi",
 				}
 			]
 		}
