@@ -283,7 +283,7 @@ export const resumedata = {
 		// "property development",
 		// "experimenting with AI tools such as diffusion and language models",
 		// "Vector Databases" //soon(tm)
-		// "Destroying/obviating the entire hiring and recruiting industry with a bit of code and ChatGPT.",
+		// "Resume Hacking",
 	],
 	"jobs":[{
 		"title":"Software Engineer II",
@@ -310,101 +310,178 @@ export const functionalResumeData = {
 	"overview": "A tenacious and innovative Software Engineer with extensive experience in back-end development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects and driving organizational success.",
 	"functional_areas":[
 		{
-			"title": "Technical Leadership & Innovation",
-			"examples": [
+			"title": "Back-end Development & Deployment",
+			"key_contributions": [
 				{
-					"headline": "Led improvements",
-					"body": "to mission-critical internal production deployment tools at Kraken, enhancing system reliability, boosting test coverage, and integrating Prometheus metrics for monitoring. These efforts eliminated incidents related to incorrect deployments.",
+					"lead_in": "Implemented improvements",
+					"continuation": "to mission-critical internal production deployment tooling at Kraken, enhancing system reliability, boosting test coverage, and integrating metrics for monitoring. These efforts eliminated production incidents related to incorrect deployments.",
 					"tech": ["Go", "Docker", "Nomad", "Prometheus", "Grafana"],
 					"daterange":"2022"
 				},
 				{
-					"headline": "Developed a custom Terraform provider",
-					"body": "to sync resources with third-party web service APIs, facilitating key business segment launches.",
-					"tech": ["Terraform", "Go", "APIs"],
-					"daterange":"2022"
+					"lead_in": "Created and maintained a Real-Time Bidding system",
+					"continuation": "for mobile advertising at Go2mobi in Python, later transitioning to Go, ensuring system stability and handling 500,000 queries per second, across a cluster of 15 servers",
+					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
+					"daterange":"2012-2017",
 				},
 				{
-					"headline": "Unified isolated testing frameworks",
-					"body": "across multiple repositories at Kraken, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
-					"tech": ["Bash scripting", "Docker", "CI pipelines"],
-					"daterange":"2023"
-				}
-			]
-		},
-		{
-			"title": "Problem Solving & Strategic Execution",
-			"examples": [
-				{
-					"headline": "Engineered a robust SMS-based survey microservice",
-					"body": "for patient follow-up at PerfectServe, saving the company tens of thousands of dollars monthly by replacing a vendor product.",
+					"lead_in": "Engineered a robust SMS-based survey",
+					"continuation": "microservice for patient follow-up at PerfectServe, integrating Twilio for efficient patient follow-up SMS communication, as a drop-in replacement for a vendor product and realizing tens of thousands of dollars of monthly operational cost savings.",
 					"tech": ["Django/Python", "Twilio", "Postgres", "Kubernetes"],
 					"daterange":"2019"
 				},
 				{
-					"headline": "Built and maintained a mobile advertising Real-Time Bidder",
-					"body": "at Go2mobi, handling 500,000 queries per second, significantly enhancing system performance and scalability.",
-					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
-					"daterange":"2012-2017",
+					"lead_in": "Re-architected existing click tracking system",
+					"continuation": "away from PHP and into async Python/Tornado for better performance, boosting click-through and conversion rates.",
+					"tech":["Python", "AWS", "RabbitMQ"],
+					"daterange":"2015",
+					"company":"Go2Mobi",
 				},
 				{
-					"headline": "Re-architected a click tracking system",
-					"body": "for better performance at Go2mobi, leading to improved click-through rates (CTR) and overall system efficiency.",
-					"tech": ["Python", "AWS"],
-					"daterange":"2013"
-				}
-			]
-		},
-		{
-			"title": "Back-end Development & Deployment",
-			"examples": [
-				{
-					"headline": "Developed and deployed various open-source projects",
-					"body": "including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
+					"lead_in": "Developed and deployed various open-source projects",
+					"continuation": "including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
 					"tech": ["Go", "Docker", "Nginx", "Git", "Python", "JavaScript", "Node.js", "ES6", "Perl", "HTML5", "React", "MySQL", "Redis", "IPFS", "LND", "Bitcoind"],
-					"daterange":"2010-Present"
+					"daterange":"2010-Present",
+					"hide": true,
 				},
-				//kind of duplication a bit here huh.
 				{
-					"headline": "Created and maintained a Real-Time Bidding system",
-					"body": "for mobile advertising at Go2mobi, transitioning from Python to Go, ensuring system stability across a cluster of 15 servers.",
-					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
-					"daterange":"2012-2017",
+					"lead_in": "Maintained and optimized content management systems (CMS) at Shrinking Planet Communications",
+					"continuation": "for hundreds of clients, enhancing existing CMS, CRM and email broadcast systems to improve performance and scalability. This role involved significant back-end development, including building a custom SQL abstraction ORM and integrating payment processing with Moneris.",
+					"tech": [
+						"Perl",
+						"Apache",
+						"MySQL",
+						"SQL",
+						"Moneris"
+					],
+					"daterange": "2002-2009",
+					"hide":true
+				},
+				{
+					"lead_in": "Enhanced CMS performance by integrating ",
+					"continuation": "mod_perl under Apache at Shrinking Planet, which led to improved CMS performance, reduced server load, and allowed the onboarding of additional clients without requiring new infrastructure.",
+					"tech": [
+						"Perl",
+						"Apache",
+						"MySQL",
+						"mod_perl",
+						"Moneris"
+					],
+					"daterange": "2002-2009",
+					"hide":true
 				}
 			]
 		},
 		{
-			"hide":true,
-			"title": "Team Leadership & Collaboration",
-			"examples": [
+			"title": "Infrastructure & Testing",
+			"key_contributions": [
+				//maybe mention something about cypress stuff at tmq
 				{
-					"headline": "Managed and led the development of various microservices",
-					"body": "at PerfectServe, integrating third-party scheduling systems, and enhancing existing microservices across the organization.",
-					"tech": ["Django/Python", "Go", "Kubernetes", "Spinnaker", "Postgres", "Redis", "Nginx"],
-					"daterange":"2020",
+					"lead_in": "Developed and tested a Terraform provider",
+					"continuation": "for syncing with a third-party accounting API at Kraken, enabling seamless interaction with the vendor's REST API, enabling the potential launch of a key business segment.",
+					"tech": ["Go", "Terraform", "REST APIs", "IaC"],
+					"daterange":"2022"
 				},
 				{
-					"headline": "Oversaw cross-functional team efforts",
-					"body": "at Kraken, standardizing testing tools across multiple teams and ensuring consistent application of best practices.",
-					"tech": ["Bash scripting", "Docker", "GitLabCI", "Terraform"],
-					"daterange":"2022-2024",
-				}
-			]
-		},
-		{
-			"title": "Project Management & Execution",
-			"examples": [
+					"lead_in": "Unified isolated testing frameworks",
+					"continuation": "across a multitude repositories at Kraken, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
+					"tech": ["Bash scripting", "Docker", "GitLabCI", "CI/CD"],
+					"daterange":"2023"
+				},
 				{
-					"headline": "Executed and delivered multiple high-impact software projects",
-					"body": "such as the integration of Gmail API with Rust for automated email testing at Kraken, enabling new capabilities for several teams.",
+					"lead_in": "Enabled new testing capabilities",
+					"continuation": "for several teams at Kraken by integrating Gmail API capability within their Rust based end-to-end testing framework.",
 					"tech": ["Gmail API", "Rust", "GitLabCI"],
 					"daterange":"2023",
 				},
 				{
-					"headline": "Directed the successful re-architecture of key infrastructure",
-					"body": "such as the click tracking system at Go2mobi, improving system performance and ensuring robust, scalable operations.",
-					"tech": ["Python", "AWS"],
-					"daterange":"2013-2017",
+					"lead_in": "Improved test coverage",
+					"continuation": "across various subsystems of the Real Time Bidder at Go2Mobi",
+					"tech": ["Python", "Go"],
+					"daterange":"2014-2016",
+					"hide":true,
+				},
+
+			]
+		},
+		{
+			"title": "Experimentation & Documentation",
+			//tweet harvesting
+			//IPFS messing around
+			//stable diffusion stuff
+			//openai api
+			//ln donations stuff
+			//react cv -> resume tuner stuff
+			"key_contributions": [
+				{
+					"lead_in": "Enhanced SEO automation systems",
+					"continuation": "by managing the development of an SEO link network building infrastructure, which involved extensive use of captcha bypass services and automated content generation across multiple platforms. These improvements led to a significant increase in link-building efficiency and SEO rankings.",
+					"tech": [
+						"Perl",
+						"Python",
+						"MySQL",
+						"CAPTCHA bypass services"
+					],
+					"daterange": "2010-2012",
+					"hide":true
+				},
+				{
+					"lead_in": "Developed network service discovery tooling to assist in the documentation of network infrastructure",
+					"continuation": "during an internship at SunLife Financial. Created diagrams in Visio 2000, developed scripts for routine server maintenance (log rotation, disk space monitoring), as well as a Perl script to catalog internal web services.",
+					"tech": [
+						"Perl",
+						"Oracle",
+						"Bash",
+						"Unix",
+						"Solaris",
+						"Visio 2000"
+					],
+					"daterange": "2001",
+					"hide":true
+				},
+				{
+					"lead_in": "Engineered a telephone-based Bitcoin wallet system",
+					"continuation": "using Interactive Voice Response (IVR) technology, allowing users to manage their Bitcoin funds via phone, including checking balances and making transactions. This innovative solution expanded access to Bitcoin services for users without internet access.",
+					"tech": [
+						"Perl",
+						"Asterisk",
+						"Bitcoind"
+					],
+					"daterange": "2010",
+					"hide":true
+				}
+			]
+		},
+
+		{
+			// "hide":true,
+			"title": "Collaborative Problem Solving & Execution",
+			"key_contributions": [
+				//could talk about that time i had to wrangle way too many people to get the traceparent header shit sorted out.
+				{
+					"lead_in": "Engineered robust integrations",
+					"continuation": "with third-party scheduling system APIs at PerfectServe, working with stakeholders to document and understand hidden requirements",
+					"tech": ["Python", "APIs"],
+					"daterange":"2020",
+				},
+				{
+					"lead_in": "Contributed to the enhancement",
+					"continuation": "and maintenance of various microservices across the organization in TypeScript, Python and Go, implementing REST endpoints to serve user interface components, improving service logs, and adjusting user interface elements.",
+					"tech": ["TypeScript", "Python", "Go", "React"],
+					"daterange":"2020",
+				},
+
+				{
+					"lead_in": "Managed large-scale ETL processes for mobile advertising data",
+					"continuation": "at Go2mobi, working with the team to develop Extract, Transform, Load operations to handle hundreds of millions of records daily from a Real Time Bidding system. This involved optimizing data flow and reporting processes to ensure accurate and timely data for decision-making.",
+					"tech": [
+						"Python",
+						"RabbitMQ",
+						"MySQL",
+						"Redshift"
+					],
+					"daterange": "2013-2017",
+					// "hide":true
 				}
 			]
 		}

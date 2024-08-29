@@ -52,8 +52,14 @@ function App() {
     // but if there is no js runtime lol .... so, will leave this in for fun for now i think but its not really that useful.
     useEffect(() => {
         if (mode === 'json') {
+            let resumedataToShow
+            if (layout === 'functional') {
+                resumedataToShow = functionalResumedata
+            } else {
+                resumedataToShow = resumedata
+            }
             // Clear the existing HTML and output the JSON
-            document.body.innerHTML = JSON.stringify(resumedata, null, 2);
+            document.body.innerHTML = JSON.stringify(resumedataToShow, null, 2);
             document.head.innerHTML = '';  // Optionally clear the head
             // Setting content type header is not directly possible in client-side JS
         }
