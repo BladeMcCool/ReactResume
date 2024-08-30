@@ -1,5 +1,13 @@
 // note: project was restructured 2024-03-15 and history of this file was not preserved in this branch. please see older master branch for detailed git blame/annotations.
 const personal_info = {
+	// "name":"Void (the Cat)",
+	// "email":"voidcat@chws.ca",
+	// "phone":"403-999-9999",
+	// "linkedin":"linkedin.com/in/the-real-void-cat",
+	// "location":"Lethbridge\u00A0AB", //\u00A0 is a non breaking space. putting &nbsp; in there didnt work, react just renders it literally.
+	// // "profile":"Software Engineer",
+	// "github":"https://github.com/SirBadlington",
+
 	"name":"Chris A. Hagglund",
 	"email":"chris@chws.ca",
 	"phone":"250-532-9694",
@@ -307,50 +315,65 @@ export const functionalResumeData = {
 	"personal_info":personal_info,
 	"education":education,
 	// "key_skills":skills,
-	"overview": "A tenacious and innovative Software Engineer with extensive experience in back-end development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects and driving organizational success.",
+	// "overview": "A tenacious and innovative Software Engineer with extensive experience in back-end development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects and driving organizational success.",
+	"overview": "A tenacious and innovative Software Engineer with extensive experience in back-end development, problem-solving, and leading end-to-end project execution. Skilled in leveraging cutting-edge technologies to deliver scalable and efficient solutions, with a proven track record in managing complex software projects.",
 	"functional_areas":[
 		{
 			"title": "Back-end Development & Deployment",
 			"key_contributions": [
 				{
-					"lead_in": "Implemented improvements",
-					"continuation": "to mission-critical internal production deployment tooling, enhancing system reliability, boosting test coverage, and integrating metrics for monitoring. These efforts eliminated production incidents related to incorrect deployments.",
-					"tech": ["Go", "Docker", "Nomad", "Prometheus", "Grafana"],
-					"daterange":"2022",
+					"lead_in": 2,
+					"description": "Implemented improvements to mission-critical internal production deployment tooling, enhancing system reliability, boosting test coverage, and integrating metrics for monitoring. These efforts eliminated production incidents related to incorrect deployments.",
+					"tech": [
+						"Go",
+						"Docker",
+						"Nomad",
+						"Prometheus",
+						"Grafana"
+					],
+					"daterange": "2022",
 					"company": "Kraken"
 				},
 				{
-					"lead_in": "Created and maintained a Real-Time Bidding system",
-					"continuation": "for mobile advertising in Python, later transitioning to Go, ensuring system stability and handling 500,000 queries per second, across a cluster of 15 servers",
-					"tech": ["Go", "Python", "AWS", "RabbitMQ", "Redis", "MySQL/Postgres"],
-					"daterange":"2012-2017",
-					"company": "Go2Mobi"
+					"lead_in": 7,
+					"description": "Created and maintained a Real-Time Bidding system for mobile advertising initially in Python, later transitioning to Go, ensuring system stability while handling 500,000 queries per second across a 15-server cluster.",
+					"tech": [
+						"Go",
+						"Python",
+						"AWS",
+						"RabbitMQ",
+						"Redis",
+						"MySQL/Postgres"
+					],
+					"daterange": "2012-2017",
+					"company": "Go2mobi"
 				},
 				{
-					"lead_in": "Engineered a robust SMS-based survey",
-					"continuation": "microservice for patient follow-up, integrating Twilio for efficient patient follow-up SMS communication, as a drop-in replacement for a vendor product and realizing tens of thousands of dollars of monthly operational cost savings.",
-					"tech": ["Django/Python", "Twilio", "Postgres", "Kubernetes"],
-					"daterange":"2019",
-					"company":"PerfectServe"
+					"lead_in": 5,
+					"description": "Engineered a robust SMS-based survey microservice for patient follow-up, integrating Twilio for efficient patient follow-up SMS communication as a drop-in replacement for a vendor product and realizing significant monthly operational cost savings.",
+					"tech": [
+						"Django/Python",
+						"Twilio",
+						"Postgres",
+						"Kubernetes"
+					],
+					"daterange": "2019",
+					"company": "PerfectServe"
 				},
 				{
-					"lead_in": "Re-architected existing click tracking system",
-					"continuation": "away from PHP and into async Python/Tornado for better performance, boosting click-through and conversion rates.",
-					"tech":["Python", "AWS", "RabbitMQ"],
-					"daterange":"2015",
-					"company":"Go2Mobi",
+					"lead_in": 6,
+					"description": "Re-architected the existing click tracking system away from PHP and into async Python/Tornado for better performance, boosting click-through and conversion rates.",
+					"tech": [
+						"Python",
+						"AWS",
+						"RabbitMQ"
+					],
+					"daterange": "2015",
+					"company": "Go2mobi"
 				},
 				{
-					"lead_in": "Developed and deployed various open-source projects",
-					"continuation": "including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
-					"tech": ["Go", "Docker", "Nginx", "Git", "Python", "JavaScript", "Node.js", "ES6", "Perl", "HTML5", "React", "MySQL", "Redis", "IPFS", "LND", "Bitcoind"],
-					"daterange":"2010-Present",
-					"company":"CHWS",
-					"hide": true,
-				},
-				{
-					"lead_in": "Maintained and optimized content management systems (CMS)",
-					"continuation": "for hundreds of clients, enhancing existing CMS, CRM and email broadcast systems to improve performance and scalability. This role involved significant back-end development, including building a custom SQL abstraction ORM and integrating payment processing with Moneris.",
+					"lead_in": 7,
+					"description": "Maintained and optimized content management systems (CMS) for hundreds of clients, enhancing existing CMS, CRM and email broadcast systems to improve performance and scalability. This role involved significant back-end development, including building a custom SQL abstraction ORM and integrating payment processing with Moneris.",
 					"tech": [
 						"Perl",
 						"Apache",
@@ -360,11 +383,11 @@ export const functionalResumeData = {
 					],
 					"daterange": "2002-2009",
 					"company": "Shrinking Planet",
-					"hide":true
+					"hide": true
 				},
 				{
-					"lead_in": "Enhanced CMS performance by integrating ",
-					"continuation": "mod_perl under Apache at Shrinking Planet, which led to improved CMS performance, reduced server load, and allowed the onboarding of additional clients without requiring new infrastructure.",
+					"lead_in": 5,
+					"description": "Enhanced CMS performance by integrating mod_perl under Apache at Shrinking Planet, which led to improved CMS performance, reduced server load, and allowed the onboarding of additional clients without requiring new infrastructure.",
 					"tech": [
 						"Perl",
 						"Apache",
@@ -374,7 +397,7 @@ export const functionalResumeData = {
 					],
 					"daterange": "2002-2009",
 					"company": "Shrinking Planet",
-					"hide":true
+					"hide": true
 				}
 			]
 		},
@@ -383,34 +406,51 @@ export const functionalResumeData = {
 			"key_contributions": [
 				//maybe mention something about cypress stuff at tmq
 				{
-					"lead_in": "Developed and tested a Terraform provider",
-					"continuation": "for syncing with a third-party accounting API, enabling seamless interaction with the vendor's REST API, enabling the potential launch of a key business segment.",
-					"tech": ["Go", "Terraform", "REST APIs", "IaC"],
-					"daterange":"2022",
-					"company": "Kraken",
+					"lead_in": 6,
+					"description": "Developed and tested a Terraform provider for syncing with a third-party accounting API, enabling seamless interaction with the vendor's REST API in preparation for the launch of a key business segment.",
+					"tech": [
+						"Go",
+						"Terraform",
+						"REST APIs",
+						"IaC"
+					],
+					"daterange": "2022",
+					"company": "Kraken"
 				},
 				{
-					"lead_in": "Unified isolated testing frameworks",
-					"continuation": "across a multitude Gitlab repositories, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
-					"tech": ["Bash scripting", "Docker", "GitLabCI", "CI/CD"],
-					"daterange":"2023",
-					"company": "Kraken",
+					"lead_in": 4,
+					"description": "Unified isolated testing frameworks across a multitude of GitLab repositories, improving workflow efficiency and test reliability in CI pipelines using Docker and Bash scripting.",
+					"tech": [
+						"Bash scripting",
+						"Docker",
+						"GitLabCI",
+						"CI/CD"
+					],
+					"daterange": "2023",
+					"company": "Kraken"
 				},
 				{
-					"lead_in": "Enabled new testing capabilities",
-					"continuation": "for several teams by integrating Gmail API capability within their Rust based end-to-end testing framework.",
-					"tech": ["Gmail API", "Rust", "GitLabCI"],
-					"daterange":"2023",
-					"company": "Kraken",
+					"lead_in": 4,
+					"description": "Enabled new testing capabilities for several teams by integrating Gmail API capability within their Rust-based end-to-end testing framework.",
+					"tech": [
+						"Gmail API",
+						"Rust",
+						"GitLabCI"
+					],
+					"daterange": "2023",
+					"company": "Kraken"
 				},
 				{
-					"lead_in": "Improved test coverage",
-					"continuation": "across various subsystems of the Real Time Bidder at Go2Mobi",
-					"tech": ["Python", "Go"],
-					"daterange":"2014-2016",
+					"lead_in": 3,
+					"description": "Improved test coverage across various subsystems of the Real-Time Bidder at Go2mobi",
+					"tech": [
+						"Python",
+						"Go"
+					],
+					"daterange": "2014-2016",
 					"company": "Shrinking Planet",
-					"hide":true,
-				},
+					"hide": true
+				}
 
 			]
 		},
@@ -420,13 +460,29 @@ export const functionalResumeData = {
 				//tweet harvesting
 				//IPFS messing around
 				//stable diffusion stuff
-				//openai api
 				//ln donations stuff
-				//react cv -> resume tuner stuff
+				//* react cv -> resume tuner stuff
+					//openai api
 			"key_contributions": [
 				{
-					"lead_in": "Enhanced SEO automation systems",
-					"continuation": "by managing the development of an SEO link network building infrastructure, which involved extensive use of captcha bypass services and automated content generation across multiple platforms. These improvements led to a significant increase in link-building efficiency and SEO rankings.",
+					"lead_in": 4,
+					"description": "Conceived of and built-out a sophisticated resume optimization system at CHWS, starting as a personal initiative to create a React-based resume for easy web publication. The project evolved to include a highly automated pipeline that iterates on resume content using the OpenAI API to align with specific job descriptions. This system ensures the resume fits a single page while enhancing candidate appeal. The pipeline integrates Gotenberg for PDF rendering and Ghostscript to convert pages into images, enabling precise content length checks.",
+					"tech": [
+						"Go",
+						"OpenAI API",
+						"Docker",
+						"React",
+						"JavaScript",
+						"Gotenberg",
+						"Ghostscript",
+					],
+					"daterange": "2024",
+					"company": "CHWS",
+					"hide": true
+				},
+				{
+					"lead_in": 4,
+					"description": "Enhanced SEO automation systems by managing the development of an SEO link network building infrastructure, which involved extensive use of captcha bypass services and automated content generation across multiple platforms. These improvements led to a significant increase in link-building efficiency and SEO rankings.",
 					"tech": [
 						"Perl",
 						"Python",
@@ -435,11 +491,11 @@ export const functionalResumeData = {
 					],
 					"daterange": "2010-2012",
 					"company": "CHWS",
-					"hide":true
+					"hide": true
 				},
 				{
-					"lead_in": "Developed network service discovery tooling to assist in the documentation of network infrastructure",
-					"continuation": "during an internship at SunLife Financial. Created diagrams in Visio 2000, developed scripts for routine server maintenance (log rotation, disk space monitoring), as well as a Perl script to catalog internal web services.",
+					"lead_in": 5,
+					"description": "Developed network service discovery tooling to assist in the documentation of network infrastructure during an internship at SunLife Financial. Created diagrams in Visio 2000, developed scripts for routine server maintenance (log rotation, disk space monitoring), as well as a Perl script to catalog internal web services.",
 					"tech": [
 						"Perl",
 						"Oracle",
@@ -450,11 +506,11 @@ export const functionalResumeData = {
 					],
 					"company": "SunLife Financial",
 					"daterange": "2001",
-					"hide":true
+					"hide": true
 				},
 				{
-					"lead_in": "Engineered a telephone-based Bitcoin wallet system",
-					"continuation": "using Interactive Voice Response (IVR) technology, allowing users to manage their Bitcoin funds via phone, including checking balances and making transactions. This innovative solution expanded access to Bitcoin services for users without internet access.",
+					"lead_in": 6,
+					"description": "Engineered a telephone-based Bitcoin wallet system using Interactive Voice Response (IVR) technology, allowing users to manage their Bitcoin funds via phone, including checking balances and making transactions. This innovative solution expanded access to Bitcoin services for users without internet access.",
 					"tech": [
 						"Perl",
 						"Asterisk",
@@ -462,7 +518,32 @@ export const functionalResumeData = {
 					],
 					"daterange": "2010",
 					"company": "CHWS",
-					"hide":true
+					"hide": true
+				},
+				{
+					"lead_in": 6,
+					"description": "Developed and deployed various open-source projects including a decentralized social network system built on IPFS and a Bitcoin Lightning Network donation system, showcasing versatility in backend and frontend technologies.",
+					"tech": [
+						"Go",
+						"Docker",
+						"Nginx",
+						"Git",
+						"Python",
+						"JavaScript",
+						"Node.js",
+						"ES6",
+						"Perl",
+						"HTML5",
+						"React",
+						"MySQL",
+						"Redis",
+						"IPFS",
+						"LND",
+						"Bitcoind"
+					],
+					"daterange": "2010-Present",
+					"company": "CHWS",
+					"hide": true
 				}
 			]
 		},
@@ -472,23 +553,30 @@ export const functionalResumeData = {
 			"key_contributions": [
 				//could talk about that time i had to wrangle way too many people to get the traceparent header shit sorted out.
 				{
-					"lead_in": "Engineered robust integrations",
-					"continuation": "with third-party scheduling system APIs, working with stakeholders to document and understand hidden requirements",
-					"tech": ["Python", "APIs"],
+					"lead_in": 3,
+					"description": "Engineered robust integrations with third-party scheduling system APIs, collaborating with stakeholders to document and understand hidden requirements.",
+					"tech": [
+						"Python",
+						"APIs"
+					],
 					"company": "PerfectServe",
-					"daterange":"2020",
+					"daterange": "2020"
 				},
 				{
-					"lead_in": "Contributed to the enhancement",
-					"continuation": "and maintenance of various microservices across the organization in TypeScript, Python and Go, implementing REST endpoints to serve user interface components, improving service logs, and adjusting user interface elements.",
-					"tech": ["TypeScript", "Python", "Go", "React"],
+					"lead_in": 4,
+					"description": "Contributed to the enhancement and maintenance of various microservices across the organization in TypeScript, Python and Go, implementing REST endpoints to serve user interface components, improving service logs, and adjusting user interface elements.",
+					"tech": [
+						"TypeScript",
+						"Python",
+						"Go",
+						"React"
+					],
 					"company": "PerfectServe",
-					"daterange":"2020",
+					"daterange": "2020"
 				},
-
 				{
-					"lead_in": "Managed large-scale ETL processes for mobile advertising data",
-					"continuation": ", working with the team to develop Extract, Transform, Load operations to handle hundreds of millions of records daily from a Real Time Bidding system. This involved optimizing data flow and reporting processes to ensure accurate and timely data for decision-making.",
+					"lead_in": 8,
+					"description": "Managed large-scale ETL processes for mobile advertising data, working with the team to develop Extract, Transform, Load operations to handle hundreds of millions of records daily from a Real-Time Bidding system. This involved optimizing data flow and reporting processes to ensure accurate and timely data for decision-making.",
 					"tech": [
 						"Python",
 						"RabbitMQ",
@@ -496,7 +584,7 @@ export const functionalResumeData = {
 						"Redshift"
 					],
 					"daterange": "2013-2017",
-					"company":"Go2mobi",
+					"company": "Go2mobi"
 				}
 			]
 		}

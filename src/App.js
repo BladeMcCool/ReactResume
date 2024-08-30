@@ -69,6 +69,8 @@ function App() {
         return null;  // Prevent React from rendering anything else
     }
 
+    document.title = resumedata.personal_info.name  + " Resume";
+
     if (layout === 'functional') {
         console.log("think about rendering this data", functionalResumedata.functional_areas)
         return (

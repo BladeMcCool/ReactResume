@@ -21,11 +21,18 @@ export class Functions extends React.Component {
                         <ul className={"functionalExamples"}>
                             {item.key_contributions.map((example, index) => {
                                 if (example.hide) { return null }
+                                const words = example.description.split(' ');
+
+                                // Get the words to be bolded
+                                const lead_in = words.slice(0, example.lead_in).join(' ');
+
+                                // Get the remaining words
+                                const description = words.slice(example.lead_in).join(' ');
                                 return (
                                     <li key={index}>
-                                        <span className={"functionalExampleHeadline"}>{example.lead_in}</span>&nbsp;{example.continuation}<br/>
-                                        <span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span>&nbsp;
-                                        ({example.daterange} - {example.company})
+                                        <span className={"functionalExampleHeadline"}>{lead_in}</span>&nbsp;{description}<br/>
+                                        <span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span>
+                                        &nbsp;({example.daterange} - {example.company})
                                     </li>
                                 )
                             })}
