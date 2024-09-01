@@ -1,6 +1,6 @@
 {
-  "short_name": "Chris Hagglund Resume",
-  "name": "A CV for Chris Hagglund, created in react - because word processors are lame.",
+  "short_name": "Resume",
+  "name": "A Resume, created in React - no word processors required.",
   "icons": [
     {
       "src": "favicon.ico",

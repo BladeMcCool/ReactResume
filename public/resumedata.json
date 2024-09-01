@@ -1,0 +1,99 @@
+{
+  "personal_info": {
+    "name": "Maximilian C. Vitae",
+    "email": "max.vitae@resumemaster.com",
+    "phone": "555-123-4567",
+    "linkedin": "linkedin.com/in/max-vitae",
+    "location": "New York, NY",
+    "profile": "Master Resume Crafter",
+    "github": "https://github.com/ResumeCraftMaster"
+  },
+  "skills": [
+    "Crafting compelling and impactful resumes for diverse industries",
+    "Deep understanding of career trajectories and job market trends",
+    "Expertise in typesetting and formatting for maximum visual appeal",
+    "Proficient in writing with precision and clarity",
+    "Adept at utilizing emerging technologies to enhance resume presentation",
+    "Extensive experience in client consultation and career coaching"
+  ],
+  "work_history": [
+    {
+      "company": "Vitae Resumes",
+      "tag": "vitaeresumes",
+      "companydesc": "Pioneering Resume Consulting Firm",
+      "location": "New York, NY",
+      "jobtitle": "Founder & Lead Consultant",
+      "daterange": "1975 - 1988",
+      "sortdate": "1975-01-01",
+      "projects": [
+        {
+          "desc": "Founded one of the first professional resume writing services, helping thousands of clients craft resumes that secured interviews and job offers across a wide range of industries.",
+          "sortdate": "1975-01-01",
+          "tech": "Typesetting, Career Counseling, Job Market Analysis"
+        },
+        {
+          "desc": "Developed a proprietary resume crafting process that became a gold standard in the industry, focusing on clarity, brevity, and impact.",
+          "sortdate": "1978-06-01",
+          "tech": "Writing, Client Consultation, Process Optimization"
+        },
+        {
+          "desc": "Integrated emerging word processing technologies into the resume creation process, vastly improving turnaround time and enabling mass customization for clients.",
+          "sortdate": "1982-03-01",
+          "tech": "Word Processing, Document Formatting, Customization"
+        }
+      ]
+    },
+    {
+      "company": "Classic Resumes",
+      "tag": "classicresumes",
+      "companydesc": "Resume Writing and Career Services",
+      "location": "Chicago, IL",
+      "jobtitle": "Senior Resume Specialist",
+      "daterange": "1965 - 1975",
+      "sortdate": "1965-01-01",
+      "projects": [
+        {
+          "desc": "Created personalized resumes for clients, focusing on articulating their unique strengths and experiences in a way that resonated with employers.",
+          "sortdate": "1965-01-01",
+          "tech": "Resume Writing, Client Interviewing, Industry Research"
+        },
+        {
+          "desc": "Trained junior staff on the nuances of resume writing, helping to standardize the quality of services offered by the company.",
+          "sortdate": "1970-01-01",
+          "tech": "Training, Mentorship, Quality Control"
+        },
+        {
+          "desc": "Collaborated with local universities to offer resume workshops, empowering students to enter the job market with confidence.",
+          "sortdate": "1973-05-01",
+          "tech": "Public Speaking, Workshop Facilitation, Career Education"
+        }
+      ]
+    }
+  ],
+  "education_v2": [
+    {
+      "institution": "Resume Masters Academy",
+      "location": "Boston, MA",
+      "description": "Certificate in Professional Resume Writing",
+      "graduated": "June 1965",
+      "notes": ["Graduated with distinction, specializing in executive resumes"]
+    },
+    {
+      "institution": "Harvard University",
+      "location": "Cambridge, MA",
+      "description": "Bachelor of Arts in English Literature",
+      "graduated": "May 1963",
+      "notes": ["Thesis: The Art of Persuasive Writing in Professional Contexts"]
+    }
+  ],
+  "hobbies": [
+    "Collecting vintage typewriters",
+    "Typography and font design",
+    "Career counseling and mentoring young professionals"
+  ],
+  "jobs": [
+    { "title": "Founder & Lead Consultant", "tag": "founder" },
+    { "title": "Senior Resume Specialist", "tag": "seniorresume" },
+    { "title": "Resume Consultant", "tag": "consultant" }
+  ]
+}

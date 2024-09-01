@@ -14,19 +14,35 @@ export class Functions extends React.Component {
         return (
             <div>
             {vars.map((item, index) => {
-                if (item.hide) { return null }
+                if (item.hide || (item.key_contributions.filter(entry => entry.hide === true).length === item.key_contributions.length)) { return null }
                 return (
                     <div key={index}>
                         <h2>{item.title}</h2>
                         <ul className={"functionalExamples"}>
-                            {item.examples.map((example, index) => {
+                            {item.key_contributions.map((example, index) => {
                                 if (example.hide) { return null }
-                                return (
-                                    <li key={index}>
-                                        <span className={"functionalExampleHeadline"}>{example.headline}</span>&nbsp;{example.body}&nbsp;({example.daterange})
-                                        <p><span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span></p>
-                                    </li>
-                                )
+                                const words = example.description.split(' ');
+
+                                // Get the words to be bolded
+                                const lead_in = words.slice(0, example.lead_in).join(' ');
+
+                                // Get the remaining words
+                                const description = words.slice(example.lead_in).join(' ');
+                                if (example.tech.length === 0) {
+                                    return (
+                                        <li key={index}>
+                                            <span className={"functionalExampleHeadline"}>{lead_in}</span>&nbsp;{description}&nbsp;({example.daterange} - {example.company})
+                                        </li>
+                                    )
+                                } else {
+                                    return (
+                                        <li key={index}>
+                                            <span className={"functionalExampleHeadline"}>{lead_in}</span>&nbsp;{description}<br/>
+                                            <span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span>
+                                            &nbsp;({example.daterange} - {example.company})
+                                        </li>
+                                    )
+                                }
                             })}
                         </ul>
                     </div>
