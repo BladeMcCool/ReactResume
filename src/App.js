@@ -10,6 +10,7 @@ import React, {useEffect, useState} from "react";
 function App() {
     const queryParams = new URLSearchParams(window.location.search);
     const mode = queryParams.get('mode');
+    const jsonserver = queryParams.get('jsonserver') || window.location.hostname;
     const layout = queryParams.get('layout') || 'default';
     const resumeDataFile = queryParams.get('resumedata');
 
@@ -78,7 +79,7 @@ function App() {
 
     const getResumeDataUrl = () => {
         if (process.env.NODE_ENV === 'development') {
-            const baseURL = `${window.location.protocol}//${window.location.hostname}:3002`;
+            const baseURL = `${window.location.protocol}//${jsonserver}:3002`;
             const fetchUrl = resumeDataFile ? `${baseURL}/resumedata/${resumeDataFile}.json` : `${baseURL}?layout=${layout}`
             console.log("dev mode, load resumedata from: ", fetchUrl)
             return fetchUrl
