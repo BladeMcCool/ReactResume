@@ -28,13 +28,21 @@ export class Functions extends React.Component {
 
                                 // Get the remaining words
                                 const description = words.slice(example.lead_in).join(' ');
-                                return (
-                                    <li key={index}>
-                                        <span className={"functionalExampleHeadline"}>{lead_in}</span>&nbsp;{description}<br/>
-                                        <span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span>
-                                        &nbsp;({example.daterange} - {example.company})
-                                    </li>
-                                )
+                                if (example.tech.length === 0) {
+                                    return (
+                                        <li key={index}>
+                                            <span className={"functionalExampleHeadline"}>{lead_in}</span>&nbsp;{description}&nbsp;({example.daterange} - {example.company})
+                                        </li>
+                                    )
+                                } else {
+                                    return (
+                                        <li key={index}>
+                                            <span className={"functionalExampleHeadline"}>{lead_in}</span>&nbsp;{description}<br/>
+                                            <span className={"functionalExampleTech"}>Tech: {example.tech.join(', ')}</span>
+                                            &nbsp;({example.daterange} - {example.company})
+                                        </li>
+                                    )
+                                }
                             })}
                         </ul>
                     </div>

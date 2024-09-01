@@ -2,7 +2,7 @@
   "name": "reactresume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/resume",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -22,9 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-once": "react-scripts test --watchAll=false",
-    "eject": "react-scripts eject",
-    "format-data": "node scripts/formatResumeData.mjs",
-    "json-server": "nodemon --watch src --watch scripts scripts/jsonServer.mjs"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
