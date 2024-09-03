@@ -74,15 +74,21 @@ export class Emploooyment extends React.Component {
 
 export class Edooocation extends React.Component {
     render() {
+        // const grad_note = func
+
         return (
             <div className={"functionalEducation"}>
                 <h2>Education</h2>
-                {this.props.education.map((item, index)=> (
-                    <div key={index}>
-                        <p><span className={"functionalExampleHeadline"}>{item.institution}</span>, {item.location}</p>
-                        <p>{item.description}, {item.graduated}</p>
-                    </div>
-                ))}
+                {this.props.education.map((item, index)=> {
+                    const grad_note = item.notes ? ` (${item.notes.filter(Boolean).join(',  ')})` : ''
+                    return (
+                        <div key={index}>
+                            <p><span className={"functionalExampleHeadline"}>{item.institution}</span>, {item.location}</p>
+                            <p>{item.description}, {item.graduated}{grad_note}</p>
+                        </div>
+                    )
+                })}
+
             </div>
         )
     }

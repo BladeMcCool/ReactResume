@@ -11,7 +11,8 @@ function App() {
     const queryParams = new URLSearchParams(window.location.search);
     const mode = queryParams.get('mode');
     const jsonserver = queryParams.get('jsonserver') || window.location.hostname;
-    const layout = queryParams.get('layout') || 'default';
+    const layout = queryParams.get('layout') || null;
+    const baseline = queryParams.get('baseline') || 'resumeproject';
     const resumeDataFile = queryParams.get('resumedata');
 
     // const [resumedata, setResumedata] = useState(defaultResumedata);
@@ -80,7 +81,7 @@ function App() {
     const getResumeDataUrl = () => {
         if (process.env.NODE_ENV === 'development') {
             const baseURL = `${window.location.protocol}//${jsonserver}:3002`;
-            const fetchUrl = resumeDataFile ? `${baseURL}/resumedata/${resumeDataFile}.json` : `${baseURL}?layout=${layout}`
+            const fetchUrl = resumeDataFile ? `${baseURL}/resumedata/${resumeDataFile}.json` : `${baseURL}?baseline=${baseline}`
             console.log("dev mode, load resumedata from: ", fetchUrl)
             return fetchUrl
         } else if (process.env.NODE_ENV === 'production') {
@@ -115,15 +116,23 @@ function App() {
     }
 
     if (error) {
-        return <div>Error loading data: {error.message}</div>;
+        return <ErrorComponent message={`Error loading data: ${error.message}`} />;
     }
 
     // Conditional rendering based on loaded data
     document.title = resumedata.personal_info.name  + " Resume";
-    if (layout === 'functional') {
+
+    if (!resumedata.layout && layout !== null) {
+        resumedata.layout = layout //helper for external utility, but probably should deprecate in favor of always including layout in the data.
+    }
+    if (!resumedata.layout) {
+        return <ErrorComponent message={`resumedata was missing the 'layout' field.`} />;
+    } else if (resumedata.layout === 'functional') {
         return <FunctionalLayout functionalResumedata={resumedata} />;
-    } else {
+    } else if (resumedata.layout === 'chrono') {
         return <ChronoLogicalLayout resumedata={resumedata} />;
+    } else {
+        return <ErrorComponent message={`Unsupported resume layout: ${resumedata.layout}`} />;
     }
 
     // if (layout === 'functional') {
@@ -139,7 +148,11 @@ function App() {
 
 const FunctionalLayout = ({ functionalResumedata }) => {
     return (
-        <div className="left-sidebar-grid functional">
+        <div className={[
+            'left-sidebar-grid',
+            'functional',
+            functionalResumedata.style // This might be undefined or null
+        ].filter(Boolean).join(' ')}>
             <Header personal_info={functionalResumedata.personal_info}/>
             <Contact personal_info={functionalResumedata.personal_info}/>
             <Overview overview={functionalResumedata.overview}/>
@@ -152,7 +165,10 @@ const FunctionalLayout = ({ functionalResumedata }) => {
 
 const ChronoLogicalLayout = ({resumedata}) => {
     return (
-        <div className="left-sidebar-grid">
+        <div className={[
+            'left-sidebar-grid',
+            resumedata.style // This might be undefined or null
+        ].filter(Boolean).join(' ')}>
             <Header personal_info={resumedata.personal_info}/>
             <Contact personal_info={resumedata.personal_info}/>
             <ExperienceV2 work_history={resumedata.work_history}/>
@@ -161,5 +177,13 @@ const ChronoLogicalLayout = ({resumedata}) => {
         </div>
     );
 };
+
+const ErrorComponent = ({ message }) => (
+    <div style={{ color: 'red', textAlign: 'center', padding: '20px' }}>
+        <h1>Error</h1>
+        <p>{message}</p>
+        <p>Please check the data and try again.</p>
+    </div>
+);
 
 export default App;

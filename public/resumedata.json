@@ -1,99 +1,179 @@
 {
+  "education_v2": [
+    {
+      "description": "Certificate in Professional Resume Writing with a focus on executive and industry-specific resumes.",
+      "graduated": "June 1965",
+      "institution": "Resume Masters Academy",
+      "location": "Boston, MA",
+      "notes": [
+        "Graduated with distinction, specializing in advanced strategies for client success and crafting impactful narratives."
+      ]
+    },
+    {
+      "description": "Bachelor of Arts in English Literature, emphasizing persuasive and effective communication skills.",
+      "graduated": "May 1963",
+      "institution": "Harvard University",
+      "location": "Cambridge, MA",
+      "notes": [
+        "Thesis: The Art of Persuasive Writing in Professional Contexts, enhancing narrative techniques for client resumes and career storytelling."
+      ]
+    }
+  ],
+  "layout": "chrono",
   "personal_info": {
-    "name": "Maximilian C. Vitae",
     "email": "max.vitae@resumemaster.com",
-    "phone": "555-123-4567",
+    "github": "https://github.com/ResumeCraftMaster",
     "linkedin": "linkedin.com/in/max-vitae",
     "location": "New York, NY",
-    "profile": "Master Resume Crafter",
-    "github": "https://github.com/ResumeCraftMaster"
+    "name": "Maximilian C. Vitae",
+    "phone": "555-123-4567"
   },
   "skills": [
-    "Crafting compelling and impactful resumes for diverse industries",
-    "Deep understanding of career trajectories and job market trends",
-    "Expertise in typesetting and formatting for maximum visual appeal",
-    "Proficient in writing with precision and clarity",
-    "Adept at utilizing emerging technologies to enhance resume presentation",
-    "Extensive experience in client consultation and career coaching"
+    "Resume crafting excellence for diverse industries",
+    "Client-focused consultation and needs assessment",
+    "In-depth job market insights and trends analysis",
+    "Compelling storytelling techniques",
+    "Mastery of visual presentation for resumes"
   ],
   "work_history": [
     {
       "company": "Vitae Resumes",
-      "tag": "vitaeresumes",
-      "companydesc": "Pioneering Resume Consulting Firm",
-      "location": "New York, NY",
-      "jobtitle": "Founder & Lead Consultant",
+      "companydesc": "Pioneering Resume Consulting Firm known for excellence in career services.",
       "daterange": "1975 - 1988",
-      "sortdate": "1975-01-01",
+      "jobtitle": "Founder \u0026 Lead Consultant",
+      "location": "New York, NY",
       "projects": [
         {
-          "desc": "Founded one of the first professional resume writing services, helping thousands of clients craft resumes that secured interviews and job offers across a wide range of industries.",
-          "sortdate": "1975-01-01",
-          "tech": "Typesetting, Career Counseling, Job Market Analysis"
+          "desc": "Founded one of the first professional resume writing services, empowering thousands of clients to secure interviews and job offers through tailored strategies that emphasized clarity and impact.",
+          "github": null,
+          "jobtitle": "Founder",
+          "location": "New York, NY",
+          "sortdate": "1975-01-01"
         },
         {
-          "desc": "Developed a proprietary resume crafting process that became a gold standard in the industry, focusing on clarity, brevity, and impact.",
-          "sortdate": "1978-06-01",
-          "tech": "Writing, Client Consultation, Process Optimization"
+          "desc": "Developed a proprietary resume crafting process that set a gold standard in the industry, ensuring clients communicated their unique value and achievements effectively.",
+          "github": null,
+          "jobtitle": "Lead Consultant",
+          "location": "New York, NY",
+          "sortdate": "1978-06-01"
         },
         {
-          "desc": "Integrated emerging word processing technologies into the resume creation process, vastly improving turnaround time and enabling mass customization for clients.",
-          "sortdate": "1982-03-01",
-          "tech": "Word Processing, Document Formatting, Customization"
+          "desc": "Integrated emerging word processing technologies into the resume creation process, improving turnaround time significantly and enabling mass customization for diverse client needs.",
+          "github": null,
+          "jobtitle": "Lead Consultant",
+          "location": "New York, NY",
+          "sortdate": "1982-03-01"
         }
-      ]
+      ],
+      "sortdate": "1975-01-01",
+      "tag": "vitaeresumes"
     },
     {
       "company": "Classic Resumes",
-      "tag": "classicresumes",
-      "companydesc": "Resume Writing and Career Services",
-      "location": "Chicago, IL",
-      "jobtitle": "Senior Resume Specialist",
+      "companydesc": "Resume Writing and Career Services focused on personalized client experiences.",
       "daterange": "1965 - 1975",
-      "sortdate": "1965-01-01",
+      "jobtitle": "Senior Resume Specialist",
+      "location": "Chicago, IL",
       "projects": [
         {
-          "desc": "Created personalized resumes for clients, focusing on articulating their unique strengths and experiences in a way that resonated with employers.",
-          "sortdate": "1965-01-01",
-          "tech": "Resume Writing, Client Interviewing, Industry Research"
+          "desc": "Created personalized resumes for clients, articulating their unique strengths and experiences in a compelling manner to resonate with employers and enhance job opportunities.",
+          "github": null,
+          "jobtitle": "Senior Specialist",
+          "location": "Chicago, IL",
+          "sortdate": "1965-01-01"
         },
         {
-          "desc": "Trained junior staff on the nuances of resume writing, helping to standardize the quality of services offered by the company.",
-          "sortdate": "1970-01-01",
-          "tech": "Training, Mentorship, Quality Control"
+          "desc": "Trained junior staff on the nuances of resume writing, helping to standardize service quality and fostering a culture of excellence within the company, which led to increased client satisfaction.",
+          "github": null,
+          "jobtitle": "Trainer",
+          "location": "Chicago, IL",
+          "sortdate": "1970-01-01"
         },
         {
-          "desc": "Collaborated with local universities to offer resume workshops, empowering students to enter the job market with confidence.",
-          "sortdate": "1973-05-01",
-          "tech": "Public Speaking, Workshop Facilitation, Career Education"
+          "desc": "Collaborated with local universities to offer resume workshops, empowering students to enter the job market with confidence and enhancing their employability through effective resume strategies.",
+          "github": null,
+          "jobtitle": "Workshop Facilitator",
+          "location": "Chicago, IL",
+          "sortdate": "1973-05-01"
         }
-      ]
-    }
-  ],
-  "education_v2": [
-    {
-      "institution": "Resume Masters Academy",
-      "location": "Boston, MA",
-      "description": "Certificate in Professional Resume Writing",
-      "graduated": "June 1965",
-      "notes": ["Graduated with distinction, specializing in executive resumes"]
+      ],
+      "sortdate": "1965-01-01",
+      "tag": "classicresumes"
     },
     {
-      "institution": "Harvard University",
-      "location": "Cambridge, MA",
-      "description": "Bachelor of Arts in English Literature",
-      "graduated": "May 1963",
-      "notes": ["Thesis: The Art of Persuasive Writing in Professional Contexts"]
+      "company": "ProJobs Consulting",
+      "companydesc": "Comprehensive Career Services providing tailored solutions for job seekers.",
+      "daterange": "1989 - 1995",
+      "jobtitle": "Resume Consultant",
+      "location": "Los Angeles, CA",
+      "projects": [
+        {
+          "desc": "Revamped strategies for high-profile clients, achieving a remarkable 90% interview success rate and significantly enhancing their career trajectories through impactful resume narratives.",
+          "github": null,
+          "jobtitle": "Consultant",
+          "location": "Los Angeles, CA",
+          "sortdate": "1989-01-01"
+        },
+        {
+          "desc": "Conducted career assessments and personalized resume workshops, equipping clients with effective tools for navigating the job market successfully and enhancing their application skills.",
+          "github": null,
+          "jobtitle": "Consultant",
+          "location": "Los Angeles, CA",
+          "sortdate": "1992-01-01"
+        }
+      ],
+      "sortdate": "1989-01-01",
+      "tag": "projobs"
+    },
+    {
+      "company": "Elite Career Solutions",
+      "companydesc": "Luxury Career Coaching Service specializing in high-end resume services.",
+      "daterange": "1996 - 2005",
+      "jobtitle": "Senior Resume Writer",
+      "location": "San Francisco, CA",
+      "projects": [
+        {
+          "desc": "Crafted executive resumes that improved client visibility in their fields, leading to higher placement rates in competitive sectors, and establishing a reputation for excellence.",
+          "github": null,
+          "jobtitle": "Senior Writer",
+          "location": "San Francisco, CA",
+          "sortdate": "1996-01-01"
+        },
+        {
+          "desc": "Designed a visually appealing resume format popular among tech professionals, enhancing their chances of being noticed by recruiters and securing interviews.",
+          "github": null,
+          "jobtitle": "Writer",
+          "location": "San Francisco, CA",
+          "sortdate": "1999-01-01"
+        }
+      ],
+      "sortdate": "1996-01-01",
+      "tag": "elitecareersolutions"
+    },
+    {
+      "company": "NextGen Resumes",
+      "companydesc": "Innovative Resume Writing Solutions leveraging modern technologies for client success.",
+      "daterange": "2006 - Present",
+      "jobtitle": "Lead Resume Strategist",
+      "location": "New York, NY",
+      "projects": [
+        {
+          "desc": "Launched a platform connecting job seekers with expert writers, enhancing access to quality services and improving job placement rates significantly for clients across industries.",
+          "github": null,
+          "jobtitle": "Strategist",
+          "location": "New York, NY",
+          "sortdate": "2006-01-01"
+        },
+        {
+          "desc": "Researched job market trends to refine strategies continuously, ensuring clients remain competitive and meet evolving employer expectations, which has led to increased client success rates.",
+          "github": null,
+          "jobtitle": "Strategist",
+          "location": "New York, NY",
+          "sortdate": "2010-01-01"
+        }
+      ],
+      "sortdate": "2006-01-01",
+      "tag": "nextgenresumes"
     }
-  ],
-  "hobbies": [
-    "Collecting vintage typewriters",
-    "Typography and font design",
-    "Career counseling and mentoring young professionals"
-  ],
-  "jobs": [
-    { "title": "Founder & Lead Consultant", "tag": "founder" },
-    { "title": "Senior Resume Specialist", "tag": "seniorresume" },
-    { "title": "Resume Consultant", "tag": "consultant" }
   ]
 }

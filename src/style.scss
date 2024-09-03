@@ -103,6 +103,14 @@ h2  { margin: 0px; font-size: $font-size; border-bottom: $fat; text-transform: u
 ul { margin-bottom: $gap-size }
 li {  font-size: $font-size; }
 
+//can add a fluffy 'style' to the baseline data if desired. more vertical space, less cramped looking (good for lower-tier jobs :)
+.fluffy {
+    h2 { margin-bottom: .7rem; }
+    li { margin-bottom: .7rem; }
+
+    div.education { margin-bottom: .7rem; } //div.education only exists in the chrono one. in functional its not called that.
+}
+
 .functionalExampleHeadline { font-weight: bold }
 ul.functionalExamples {
     margin-top: 0rem;
