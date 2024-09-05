@@ -1,95 +1,28 @@
 import {ExperienceV2, Header, Contact, Education, Skills} from "./ResumeParts";
 import {Overview, Functions, Emploooyment, Edooocation} from "./FunctionalResumeParts";
-// import {
-//     resumedata as defaultResumedata,
-//     // functionalResumeData as importedFunctionalResumeData,
-//     retailFunctional as importedFunctionalResumeData,
-// } from "./resumedata.mjs";
 import React, {useEffect, useState} from "react";
 
 function App() {
     const queryParams = new URLSearchParams(window.location.search);
-    const mode = queryParams.get('mode');
-    const jsonserver = queryParams.get('jsonserver') || window.location.hostname;
+    const jsonserver = queryParams.get('jsonserver') || null; //include the port.
     const layout = queryParams.get('layout') || null;
     const baseline = queryParams.get('baseline') || 'resumeproject';
     const resumeDataFile = queryParams.get('resumedata');
 
-    // const [resumedata, setResumedata] = useState(defaultResumedata);
-    // const [functionalResumedata, setFunctionalResumedata] = useState(importedFunctionalResumeData);
-    //
-    // useEffect(() => {
-    //     console.log("here 1")
-    //     updateResumeDataForLayout(setResumedata, resumeDataFile)
-    // }, [resumeDataFile]);
-    // useEffect(() => {
-    //     console.log("here 2")
-    //     updateResumeDataForLayout(setFunctionalResumedata, resumeDataFile)
-    // }, [resumeDataFile]);
-    //
-    // let updateResumeDataForLayout =  function(setResumeDataCb, resumeDataFile) {
-    //     if (resumeDataFile) {
-    //         const baseURL = `${window.location.protocol}//${window.location.hostname}:3002`;
-    //         const fetchUrl = `${baseURL}/resumedata/${resumeDataFile}.json`
-    //         console.log("Load resumedata from url: ", fetchUrl)
-    //         fetch(fetchUrl)
-    //             .then(response => {
-    //                 if (!response.ok) {
-    //                     throw new Error(`Failed to load the resume data from ${resumeDataFile}.json`);
-    //                 }
-    //                 return response.json();
-    //             })
-    //             .then(data => {
-    //                 console.log("here about to setResumeDataCb")
-    //                 setResumeDataCb(data)
-    //             })
-    //             .catch(error => {
-    //                 console.error("Error loading resume data:", error);
-    //                 setResumeDataCb(defaultResumedata);
-    //             });
-    //     }
-    // }
-
-
-    //this sorta works, in the sense that it will render the json and show it in the browser, but
-    // its not really good enough for what i want because i need a dumb http client to be able to pull it down
-    // and what this will do is use react facilities in javascript to basically cause the final rendered page to be this json
-    // but if there is no js runtime lol .... so, will leave this in for fun for now i think but its not really that useful.
-    // useEffect(() => {
-    //     if (mode === 'json') {
-    //         let resumedataToShow
-    //         if (layout === 'functional') {
-    //             resumedataToShow = functionalResumedata
-    //         } else {
-    //             resumedataToShow = resumedata
-    //         }
-    //         // Clear the existing HTML and output the JSON
-    //         document.body.innerHTML = JSON.stringify(resumedataToShow, null, 2);
-    //         document.head.innerHTML = '';  // Optionally clear the head
-    //         // Setting content type header is not directly possible in client-side JS
-    //     }
-    // }, [mode, resumedata]);
-
-    // if (mode === 'json') {
-    //     return null;  // Prevent React from rendering anything else
-    // }
     const [resumedata, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-
     const getResumeDataUrl = () => {
-        if (process.env.NODE_ENV === 'development') {
-            const baseURL = `${window.location.protocol}//${jsonserver}:3002`;
-            const fetchUrl = resumeDataFile ? `${baseURL}/resumedata/${resumeDataFile}.json` : `${baseURL}?baseline=${baseline}`
-            console.log("dev mode, load resumedata from: ", fetchUrl)
-            return fetchUrl
-        } else if (process.env.NODE_ENV === 'production') {
+        if (process.env.NODE_ENV === 'production' && jsonserver === null) {
             console.log("production data url should be used: ", process.env.REACT_APP_PROD_RESUMEDATA_FILE)
             //or maybe it should be a hardcoded path ... tbd.
             return process.env.REACT_APP_PROD_RESUMEDATA_FILE;
         } else {
-            throw new Error('NODE_ENV is not set to development or production');
+            const baseURL = `${window.location.protocol}//${jsonserver}`;
+            const fetchUrl = resumeDataFile ? `${baseURL}/resumedata/${resumeDataFile}.json` : `${baseURL}?baseline=${baseline}`
+            console.log("dev mode, load resumedata from: ", fetchUrl)
+            return fetchUrl
         }
     };
 
@@ -134,16 +67,6 @@ function App() {
     } else {
         return <ErrorComponent message={`Unsupported resume layout: ${resumedata.layout}`} />;
     }
-
-    // if (layout === 'functional') {
-    //     console.log("think about rendering this data", functionalResumedata.functional_areas)
-    //     return (
-    //     )
-    // } else {
-    //     return (
-    //     )
-    // }
-
 }
 
 const FunctionalLayout = ({ functionalResumedata }) => {

@@ -1,29 +1,29 @@
-# Start from the node base image
-FROM node:latest
+# Use an official Node.js runtime as a parent image
+FROM node:21-alpine as build
 
-# Set the working directory in the Docker container
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the package.json and package-lock.json (if available)
+# Copy package.json and package-lock.json into the container
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of your app's source code
+# Copy the rest of the application code into the container
 COPY . .
 
-# build the static website section
+# Build the React app for production
 RUN npm run build
 
-# Expose port 3000 to the outside world
-EXPOSE 3000
+# Use Nginx to serve the built files
+FROM nginx:alpine
 
-# Start the app
-CMD ["npm", "start"]
+# Copy the build output to Nginx's HTML directory
+COPY --from=build /app/build /usr/share/nginx/html
 
-# then you can access it via:
-# http://localhost:3000/resume/
+# Expose port 80
+EXPOSE 80
 
-# note: the normal way for development is just to run `npm start` locally, it will go on port 3000 that way too but be live updating dev server
-#       not just node js serving a statically built site which is what running this image will do.
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
