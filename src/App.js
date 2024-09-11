@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 
 function App() {
     const queryParams = new URLSearchParams(window.location.search);
-    const jsonserver = queryParams.get('jsonserver') || null; //include the port.
+    const jsonserver = queryParams.get('jsonserver') || (process.env.NODE_ENV === 'development' ? `${window.location.hostname}:3002` : null); //include the port.
     const layout = queryParams.get('layout') || null;
     const baseline = queryParams.get('baseline') || 'resumeproject';
     const resumeDataFile = queryParams.get('resumedata');
@@ -19,8 +19,9 @@ function App() {
             //or maybe it should be a hardcoded path ... tbd.
             return process.env.REACT_APP_PROD_RESUMEDATA_FILE;
         } else {
+            const dataPath = process.env.REACT_APP_JSONDATA_PATH ? process.env.REACT_APP_JSONDATA_PATH : "resumedata";
             const baseURL = `${window.location.protocol}//${jsonserver}`;
-            const fetchUrl = resumeDataFile ? `${baseURL}/resumedata/${resumeDataFile}.json` : `${baseURL}?baseline=${baseline}`
+            const fetchUrl = resumeDataFile ? `${baseURL}/${dataPath}/${encodeURIComponent(resumeDataFile)}.json` : `${baseURL}?baseline=${baseline}`
             console.log("dev mode, load resumedata from: ", fetchUrl)
             return fetchUrl
         }
@@ -43,6 +44,12 @@ function App() {
 
         fetchData();
     }, []); // Empty dependency array ensures this runs once when the component mounts
+
+    useEffect(() => {
+        if (!loading) {
+            window.contentLoaded = true //for pdf renderer to detect.
+        }
+    }, [loading]);
 
     if (loading) {
         return <div>Loading...</div>;
