@@ -41,7 +41,7 @@ export class Education extends React.Component {
                             <p>{entry.graduated}</p>
                             <p>{entry.location}</p>
                         </div>
-                        {entry.notes.length > 0 && (
+                        {entry.notes !== null && entry.notes.length > 0 && (
                             <div className="work-entries">
                                 <ul>
                                     {entry.notes.map((item, index) =>

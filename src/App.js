@@ -8,6 +8,7 @@ function App() {
     const layout = queryParams.get('layout') || null;
     const baseline = queryParams.get('baseline') || 'resumeproject';
     const resumeDataFile = queryParams.get('resumedata');
+    const jsonServerToken = queryParams.get('token') || null;
 
     const [resumedata, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -20,7 +21,8 @@ function App() {
             return process.env.REACT_APP_PROD_RESUMEDATA_FILE;
         } else {
             const dataPath = process.env.REACT_APP_JSONDATA_PATH ? process.env.REACT_APP_JSONDATA_PATH : "resumedata";
-            const baseURL = `${window.location.protocol}//${jsonserver}`;
+            const proto = jsonServerToken === null ? window.location.protocol : 'https:'
+            const baseURL = `${proto}//${jsonserver}`;
             const fetchUrl = resumeDataFile ? `${baseURL}/${dataPath}/${encodeURIComponent(resumeDataFile)}.json` : `${baseURL}?baseline=${baseline}`
             console.log("dev mode, load resumedata from: ", fetchUrl)
             return fetchUrl
@@ -31,7 +33,21 @@ function App() {
         // Replace this with your data loading logic, e.g., fetch or import a JSON file
         const fetchData = async () => {
             try {
+                // Prepare headers
+                // const headers = {};
+                // // If the token is present, add the Authorization header
+                // if (jsonServerToken) {
+                //     headers['X-Authorization'] = `Bearer ${jsonServerToken}`;
+                // }
+                // console.log("that token should come through as", jsonServerToken)
+                // console.log("will fetch json with these headers: ", headers)
+
                 // Simulate fetching data from a file
+                // const response = await fetch(getResumeDataUrl(), { headers });
+
+                //seems that if the request to load this page from gotenberg included an Authorization header that this
+                // fetch request will pass it along, and we can't disable it or overwrite with the json server token,
+                // so we're just going to accept that as a fact of life and have the json server use that token instead.
                 const response = await fetch(getResumeDataUrl());
                 const result = await response.json();
                 setData(result);
