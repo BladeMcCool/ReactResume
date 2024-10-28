@@ -7,7 +7,6 @@ import {
     CoverLetterContact,
     CoverLetterContents,
     CoverLetterDate,
-    Wot
 } from "./CoverLetterParts";
 
 function App() {

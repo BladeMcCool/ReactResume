@@ -1,16 +1,6 @@
 import React from "react";
 
 export function CoverLetterContact({ personal_info }) {
-
-    // "personal_info": {
-    //     "name": "Billy Bloads",
-    //         "email": "billy.bloads@example.com",
-    //         "phone": "(555) 123-4567",
-    //         "linkedin": "https://www.linkedin.com/in/billybloads",
-    //         "location": "Port Royal, Jamaica",
-    //         "github": "https://github.com/billybloads"
-    // },
-
     return (
         <>
             <p>
@@ -49,7 +39,6 @@ export function CoverLetterContact({ personal_info }) {
     )
 }
 
-
 export function CoverLetterDate({ date }) {
 
     function formatDateOrText(input) {
@@ -86,7 +75,6 @@ export function CoverLetterDate({ date }) {
 
     return (
         <>
-            {/*<p>&nbsp;</p>*/}
             <p>
                 {formatDateOrText(date)}
             </p>
@@ -96,12 +84,6 @@ export function CoverLetterDate({ date }) {
 
 
 export function CoverLetterCompany({ company_info }) {
-
-    // "company_info": {
-    //     "company_name": "East India Trading Company",
-    //         "organization_name": null
-    // },
-
     const hasAnyCompanyInfo = company_info.company_name || company_info.organization_name
 
     //prevent it from doubling up the same exact string (idealy not populated like that but ...)
@@ -113,7 +95,6 @@ export function CoverLetterCompany({ company_info }) {
         <>
             {hasAnyCompanyInfo && (
                 <>
-                    {/*<p>&nbsp;</p>*/}
                     <p>
                         {company_info.company_name && (
                             <>
@@ -133,13 +114,6 @@ export function CoverLetterCompany({ company_info }) {
 }
 
 export function CoverLetterContents({ contents }) {
-
-    // "company_info": {
-    //     "company_name": "East India Trading Company",
-    //         "organization_name": null
-    // },
-
-
     return (
         <>
         {contents.map((entry, index) =>
@@ -173,13 +147,3 @@ export function CoverLetterClosing({ closing, name }) {
         </>
     )
 }
-
-// "date": "",
-//     "letter_contents": [
-//     "Dear Hiring Manager,",
-//     "I am writing to express my enthusiastic interest in the Deckhand position at the East India Trading Company. With years of experience navigating the high seas, I have honed my skills as an expert deckhand.",
-//     "My unique penchant for setting expensive things on fire has proven invaluable in creating strategic diversions during critical missions. This unconventional skill set, combined with my dedication and hard work, makes me a strong candidate for your team.",
-//     "I am eager to contribute my expertise to your esteemed company and would welcome the opportunity to discuss how my background aligns with your needs.",
-//     "Thank you for considering my application."
-// ],
-//     "closing": "Embarrassingly Subservient,"
