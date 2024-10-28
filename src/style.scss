@@ -107,6 +107,7 @@ li {  font-size: $font-size; }
 .fluffy {
     h2 { margin-bottom: .7rem; }
     li { margin-bottom: .7rem; }
+    p { margin-bottom: 1.4rem; }
 
     div.education { margin-bottom: .7rem; } //div.education only exists in the chrono one. in functional its not called that.
 }
@@ -126,3 +127,19 @@ ul.functionalExamples {
 }
 .functional h2 { border-bottom: 0px; font-weight: normal; text-transform: none }
 .functional .header h2 { text-transform: uppercase; font-weight: bold; }
+
+
+/* grid container */
+.cover-letter {
+    display:grid;
+    margin: 1rem;
+
+    @media (min-width:768px) {
+        max-width: calc(768px - 2rem);
+        margin: 1rem auto;
+    }
+
+    p {
+        margin-bottom: .7rem;
+    }
+}

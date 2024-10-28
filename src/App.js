@@ -1,6 +1,14 @@
 import {ExperienceV2, Header, Contact, Education, Skills} from "./ResumeParts";
 import {Overview, Functions, Emploooyment, Edooocation} from "./FunctionalResumeParts";
 import React, {useEffect, useState} from "react";
+import {
+    CoverLetterClosing,
+    CoverLetterCompany,
+    CoverLetterContact,
+    CoverLetterContents,
+    CoverLetterDate,
+    Wot
+} from "./CoverLetterParts";
 
 function App() {
     const queryParams = new URLSearchParams(window.location.search);
@@ -76,7 +84,8 @@ function App() {
     }
 
     // Conditional rendering based on loaded data
-    document.title = resumedata.personal_info.name  + " Resume";
+    const docTitle = (resumedata.layout === 'coverletter') ? "Cover Letter" : resumedata.personal_info.name  + " Resume"
+    document.title = docTitle;
 
     if (!resumedata.layout && layout !== null) {
         resumedata.layout = layout //helper for external utility, but probably should deprecate in favor of always including layout in the data.
@@ -87,6 +96,8 @@ function App() {
         return <FunctionalLayout functionalResumedata={resumedata} />;
     } else if (resumedata.layout === 'chrono') {
         return <ChronoLogicalLayout resumedata={resumedata} />;
+    } else if (resumedata.layout === 'coverletter') {
+        return <CoverLetterLayout coverletterData={resumedata} />;
     } else {
         return <ErrorComponent message={`Unsupported resume layout: ${resumedata.layout}`} />;
     }
@@ -124,8 +135,25 @@ const ChronoLogicalLayout = ({resumedata}) => {
     );
 };
 
-const ErrorComponent = ({ message }) => (
-    <div style={{ color: 'red', textAlign: 'center', padding: '20px' }}>
+
+const CoverLetterLayout = ({ coverletterData }) => {
+    return (
+        <div className={[
+            'cover-letter',
+            coverletterData.style // This might be undefined or null
+        ].filter(Boolean).join(' ')}>
+            <CoverLetterContact personal_info={coverletterData.personal_info}/>
+            <CoverLetterDate date={coverletterData.date}/>
+            <CoverLetterCompany company_info={coverletterData.company_info}/>
+            <CoverLetterContents contents={coverletterData.letter_contents}/>
+            <CoverLetterClosing closing={coverletterData.closing} name={coverletterData.personal_info.name}/>
+        </div>
+
+    )
+}
+
+const ErrorComponent = ({message}) => (
+    <div style={{color: 'red', textAlign: 'center', padding: '20px'}}>
         <h1>Error</h1>
         <p>{message}</p>
         <p>Please check the data and try again.</p>
